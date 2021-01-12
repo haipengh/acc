@@ -1,3 +1,0 @@
-VCMS2     :NFR2  ::OEM::::::::NFR - EOS
-VEFM2     :NFR2  ::OEM::::::::NFR - eForms
-OMA       :OEM   :OMA:OEM:${AM_LOCAL_TOP}/resource/$(hostname)/profile_$(hostname)_OMA.env:oemappl::::N:N:GC Agent (DEV)

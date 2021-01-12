@@ -1,5 +1,0 @@
-# META BUILD-23
-OMSREPO  :DEV       :   ::     ::::              :              :OEM:   :                                                                              :       ::::JOB_PRI_BK_DB_ONLINE_COMP_1MONTHS: :                      :       :OEM
-OMS      :OEM       :OMS::     ::::              :              :OEM:   :${AM_LOCAL_TOP}/resource/$(hostname)/profile_$(hostname)_OMS.env              :oemappl::::N                                :N:                      :       :GC OMS (DEV)
-OMA      :OEM       :OMA::     ::::              :              :OEM:   :${AM_LOCAL_TOP}/resource/$(hostname)/profile_$(hostname)_OMA.env              :oemappl::::N                                :N:                      :       :GC Agent (DEV)
-

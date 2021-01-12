@@ -1,2 +1,0 @@
-HCDEMO    :ACCENV     :   :::::       :      :HCM::hcmappl::${HOME}/hcm/${MODULE_TAG}:hcmappl: : ::Test HRIS
-VCFDEMO   :ACCENV     :   :::::       :      :VCF::vcfappl::${HOME}/hcm/${MODULE_TAG}:vcfappl: : ::Test VCF

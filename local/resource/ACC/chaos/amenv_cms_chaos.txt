@@ -1,3 +1,0 @@
-VCMS1     :NFR       ::::::VEFM1 :      :EOS::::N:N:JOB_PRI_BK_DB_ONLINE_COMP_2WEEKS::NFR - EOS
-VEFM1     :NFR       ::::::      :VCMS1 :EFM::::N:N:JOB_PRI_BK_DB_ONLINE_COMP_2WEEKS::NFR - eForms
-CMSPST    :OPTIM     ::::::      :      :OPT::::::JOB_PRI_BK_DB_ONLINE_2WEEKS:JOB_PRI_BK_ARCHLOG:Optim

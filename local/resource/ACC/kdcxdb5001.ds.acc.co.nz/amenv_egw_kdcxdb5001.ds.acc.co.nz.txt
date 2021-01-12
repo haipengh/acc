@@ -1,5 +1,0 @@
-# META BUILD-23
-EGW      :EGW       :GRP::     ::::              :              :   :ACC:                                                                              :       ::::                                ::                      :       :EGW Group
-DEGW     :DEVL      :   ::EGW  ::::              :              :EGW:   :                                                                              :       ::::                                ::                      :       :eGateway Development - decommissioned
-TEGW     :DEVL      :   ::EGW  ::::              :              :EGW:   :                                                                              :       ::::                                ::                      :       :eGateway Test
-UEGW     :DEVL      :   ::EGW  ::::              :              :EGW:   :                                                                              :       ::::                                ::                      :       :eGateway UAT

@@ -1,4 +1,0 @@
-# META BUILD-23
-LEG      :LEG       :GRP::     ::::              :              :   :ACC:                                                                              :       ::::                                ::                      :       :WCM Group
-DLEG1    :DEV       :   ::LEG  ::::              :              :LEG:   :                                                                              :       ::::                                ::                      :       :Dev - Pataka
-TLEG1    :TEST      :   ::LEG  ::::              :              :LEG:   :                                                                              :       ::::                                ::                      :       :Test - Pataka

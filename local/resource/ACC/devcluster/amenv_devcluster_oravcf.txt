@@ -1,5 +1,0 @@
-# META BUILD-23
-DVCF     :DEVL      :   ::     ::::              :              :VCF:   :${LOCAL_TOP}/resource/${_env_id}/profile_${_env_id}.env ${_env_id}${AM_HOSTID}:vcfappl::::N: :${HOST_GRP_NODE1_ONLY}:       :VCF Dev
-TVCF     :DEVL      :   ::     ::::              :              :VCF:   :${LOCAL_TOP}/resource/${_env_id}/profile_${_env_id}.env ${_env_id}${AM_HOSTID}:vcfappl::::N: :${HOST_GRP_NODE1_ONLY}:       :VCF Test
-#UVCF     :DEVL      :   ::     ::::              :              :VCF:   :${LOCAL_TOP}/resource/${_env_id}/profile_${_env_id}.env ${_env_id}${AM_HOSTID}:vcfappl:::: : :${HOST_GRP_NODE1_2}   :       :VCF UAT
-

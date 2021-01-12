@@ -1,2 +1,0 @@
-BIREPO  :DEV   ::OBI::::::::BI Repository
-IDP_D   :DEV   ::OBI::::::::IDP Development

@@ -1,6 +1,0 @@
-# META BUILD-23
-STAGEHCM :STAGEHCM  :   ::     ::::              :              :HCM:   :${LOCAL_TOP}/resource/${_env_id}/profile_${_env_id}.env ${_env_id}${AM_HOSTID}:hcmappl::::N: :${HOST_GRP_NODE1_ONLY}:       :HRIS Stage
-#E53HCM   :ENV53-HCM :   ::     ::::              :              :HCM:   :${LOCAL_TOP}/resource/${_env_id}/profile_${_env_id}.env ${_env_id}${AM_HOSTID}:hcmappl::::N: :${HOST_GRP_NODE1_ONLY}:       :Env53 - HRIS Dev
-#E54HCM   :ENV54-HCM :   ::     ::::              :              :HCM:   :${LOCAL_TOP}/resource/${_env_id}/profile_${_env_id}.env ${_env_id}${AM_HOSTID}:hcmappl::::N: :${HOST_GRP_NODE1_ONLY}:       :Env54 - HRIS FIT
-#E55HCM   :ENV55-HCM :   ::     ::::              :              :HCM:   :${LOCAL_TOP}/resource/${_env_id}/profile_${_env_id}.env ${_env_id}${AM_HOSTID}:hcmappl:::: : :${HOST_GRP_NODE1_2}   :       :Env55 - HRIS UAT
-

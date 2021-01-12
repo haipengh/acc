@@ -1,1 +1,0 @@
-include = ${AM_LOCAL_TOP}/resource/peta/amenv_emg_peta.txt

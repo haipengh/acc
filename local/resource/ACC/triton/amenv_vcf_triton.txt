@@ -1,6 +1,0 @@
-# META BUILD-23
-NFR      :NFR       :GRP::     ::::              :              :   :ACC:                                                                              :       ::                         :       :                                            :                  :                      :       :NFR Group
-VCFCN001 :NFR       :   ::NFR  ::::              :              :VCF:   :                                                                              :vcfappl::${HOME}/vcf/${MODULE_TAG}:vcfappl:PURGE_BACKUP_ALL,JOB_PRI_BK_DB_ONLINE_1COPYS:JOB_PRI_BK_ARCHLOG:                      :       :NFR - VCF Drafts
-VCFCN101 :NFR       :   ::NFR  ::::              :              :VCF:   :                                                                              :vcfappl::${HOME}/vcf/${MODULE_TAG}:vcfappl:PURGE_BACKUP_ALL,JOB_PRI_BK_DB_ONLINE_1COPYS:JOB_PRI_BK_ARCHLOG:                      :       :NFR - VCF 1:1
-VCFCN201 :NFR       :   ::NFR  ::::              :              :VCF:   :                                                                              :vcfappl::${HOME}/vcf/${MODULE_TAG}:vcfappl:PURGE_BACKUP_ALL,JOB_PRI_BK_DB_ONLINE_1COPYS:JOB_PRI_BK_ARCHLOG:                      :       :NFR - VCF 2:1
-

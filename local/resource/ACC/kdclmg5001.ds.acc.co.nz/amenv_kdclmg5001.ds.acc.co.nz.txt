@@ -1,5 +1,0 @@
-# META BUILD-23
-DGCREPO  :DEVOEM    :   ::     :11.2.0.2.0:::              :OMS           :OEM:   :${AM_LOCAL_TOP}/resource/${_env_id}/profile_${_env_id}.env                    :       ::::JOB_PRI_BK_DB_ONLINE_COMP_3WEEKS: :                      :       :DEV GC Repo
-OMS      :DEVOEM    :OMS::     :11.1.0.1  :::DGCREPO       :OMA           :OEM:   :${AM_LOCAL_TOP}/resource/$(hostname)/profile_$(hostname)_OMS.env              :       ::::N                               :N:                      :       :DEV GC OMS
-OMA      :DEVOEM    :OMA::     :11.1.0.1  :::OMS           :              :OEM:   :${AM_LOCAL_TOP}/resource/$(hostname)/profile_$(hostname)_OMA.env              :       ::::N                               :N:                      :       :DEV GC Agent
-

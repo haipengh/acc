@@ -1,2 +1,0 @@
-TWCMPUBL  :WCM-TST   ::::::      :      :WCM::wcmappl::${HOME}/acc/${MODULE_TAG}:wcmappl:JOB_PRI_BK_DB_ONLINE_COMP_2WEEKS:::WCM Test - Public
-TWCMEXTR  :WCM-TST   ::::::      :      :WCM::wcmappl::${HOME}/acc/${MODULE_TAG}:wcmappl:JOB_PRI_BK_DB_ONLINE_COMP_2WEEKS:::WCM Test - Extranet

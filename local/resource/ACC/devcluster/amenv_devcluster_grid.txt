@@ -1,2 +1,0 @@
-# META BUILD-23
-+ASM     :GRID      :OGI::     :11.2.0.4.5:::              :              :OGI:   :${LOCAL_TOP}/resource/profile_devcluster_grid_11g.env ${_env_id}${AM_HOSTID}  :       ::::N:N:${HOST_GRP_ALL}       :       :Development Cluster

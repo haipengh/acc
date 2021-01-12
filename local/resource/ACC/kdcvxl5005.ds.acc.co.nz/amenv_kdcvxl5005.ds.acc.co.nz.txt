@@ -1,5 +1,0 @@
-CLIENT   :CLIENT :   ::::::        :              :ORA:   :${LOCAL_TOP}/resource/${HOSTNAME}/profile_${AM_HOST}_INSTCLI_12c.env :       :::: : :       :       :Instant Client
-include = ${AM_LOCAL_TOP}/resource/devcluster/amenv_devcluster_oracle.txt
-include = ${AM_LOCAL_TOP}/resource/devcluster/amenv_devcluster_orahris.txt
-include = ${AM_LOCAL_TOP}/resource/devcluster/amenv_devcluster_oravcf.txt
-include = ${AM_LOCAL_TOP}/resource/drcluster/amenv_drcluster_oraclenfr.txt

@@ -1,3 +1,0 @@
-# META BUILD-23
-OMA      :DEVOEM    :OMA::     :12.1.0.5.0:::              :              :OEM:   :${AM_LOCAL_TOP}/resource/devcluster/profile_devcluster_OMA_12c.env            :       ::::N:N:${HOST_GRP_ALL}       :       :DEV GC Agent
-#OMA      :DEVOEM    :OMA::     :11.1.0.1  :::              :              :OEM:   :${AM_LOCAL_TOP}/resource/devcluster/profile_devcluster_OMA_11g.env            :       ::::N:N:${HOST_GRP_ALL}       :       :DEV GC Agent

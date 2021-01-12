@@ -1,2 +1,0 @@
-#TESB2     :ESB       ::::::      :      :ESB::::::::ESB Suite 73 (decommissioned)
-#TESB3     :ESB       ::::::      :      :ESB::::::::ESB (decommissioned)
