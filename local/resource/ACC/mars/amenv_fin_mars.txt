@@ -1,0 +1,1 @@
+#PSSOF     :PSS       :EXT:::::      :      :FIN:/oracle/bin/PSSOF.env:::::N:N::Financial - FSS

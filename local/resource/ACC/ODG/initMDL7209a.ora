@@ -1,0 +1,15 @@
+# This is a sample agent init file that contains the HS parameters that are
+# needed for the Transparent Gateway for Sybase
+
+#
+# HS init parameters
+#
+HS_FDS_CONNECT_INFO=MDL7209:17209/ird_imp
+HS_FDS_TRACE_LEVEL=OFF
+HS_FDS_RECOVERY_ACCOUNT=RECOVER
+HS_FDS_RECOVERY_PWD=Oracle_2_Sybase
+
+#
+# Environment variables required for Sybase
+#
+set SYBASE=/opt/sybase/OpenClient-15

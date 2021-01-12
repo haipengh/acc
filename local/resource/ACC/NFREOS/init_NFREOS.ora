@@ -1,0 +1,105 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/NFREOS/init_NFREOS.ora,v 1.31 2020/02/20 03:03:54 cvsadmin Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : init.ora
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000 H Hong        2005/06/13 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# ##################
+# common
+# ##################
+ifile=/nfr001/local/resource/init_drrac_EOS_12cR1_large_12102.ora
+
+# ##################
+# site specific
+# ##################
+#db_create_file_dest		= "+NFR_TD_EOS_DATA"
+#db_create_online_log_dest_1	= "+NFR_T0_REDOA"	
+#db_create_online_log_dest_2	= "+NFR_T0_REDOB"
+#sga_max_size                    = 120G		# quiet time shrink: 8G;   full test: 120G
+sga_target			= 120G		# quiet time shrink: 8G;   full test: 120G
+db_cache_size                   = 48G		# quiet time shrink: 4G;   full test: 48G
+shared_pool_size                = 14G		# quiet time shrink: 2G;   full test: 14G
+pga_aggregate_target            = 8G		# quiet time shrink: 500M; full test: 8G
+#streams_pool_size               = 800M
+session_cached_cursors          = 400
+open_cursors                    = 2400		# quiet time shrink: 1200; full test: 2400
+processes                       = 5000		# quiet time shrink: 1000; full test: 5000
+sessions                        = 5500		# quiet time shrink: 1100; full test: 5500
+transactions                    = 20000		# quiet time shrink: 4000; full test: 20000
+statistics_level		= TYPICAL
+#db_ultra_safe			= DATA_AND_INDEX
+db_block_checksum		= TRUE		
+#db_block_checking		= FULL
+#db_lost_write_protect		= TYPICAL
+control_file_record_keep_time	= 30
+db_recovery_file_dest           = "+NFR_TD_FRA"
+db_recovery_file_dest_size	= 1000G
+#_trace_files_public             = TRUE
+archive_lag_target              = 270		# 4.5 mins
+
+# ##################
+# names
+# ##################
+db_domain 			= "DS.ACC.CO.NZ"		
+db_name 			= NFREOS
+db_unique_name			= NFREOS_ADC
+#service_names 			= NFREOS
+
+# ##################
+# RAC/instances
+# ##################
+##NFREOS1.undo_tablespace 	= UNDOTBS1
+##NFREOS2.undo_tablespace 	= UNDOTBS2
+##NFREOS3.undo_tablespace 	= UNDOTBS3
+#local_listener                  = (ADDRESS=(PROTOCOL=TCP)(HOST=10.12.100.33)(PORT=1521))
+remote_listener			= "adclor010x-scan:1521"
+
+# ##################
+# undo
+# ##################
+#undo_retention			= 120000
+
+# ##################
+# file creation
+# ##################
+control_files			= ('+NFR_T0_REDOA/NFREOS_ADC/CONTROLFILE/control01.ctl', '+NFR_T0_REDOB/NFREOS_ADC/CONTROLFILE/control02.ctl')
+
+# ##################
+# security
+# ##################
+audit_file_dest 		= /nfr001/app/oraclenfr/admin/NFREOS_ADC/adump
+
+# ##################
+# diagnostic
+# ##################
+diagnostic_dest			= /nfr001/app/oraclenfr
+
+# ##################
+# data guard section
+# ##################
+log_archive_config		= 'send,dg_config=(NFREOS_ADC, NFRDSC_ADC)'
+log_archive_dest_1 		= "location=USE_DB_RECOVERY_FILE_DEST mandatory"
+log_archive_dest_state_1 	= "enable"
+#log_archive_dest_2 		= 'service=NFRDSC_ADC LGWR ASYNC NOREGISTER VALID_FOR=(ONLINE_LOGFILES,PRIMARY_ROLE) TEMPLATE=+NFR_TD_FRA/NFRDSC_ADC/ARCHIVELOG/NFREOS_ADC_%t_%s_%r.log DB_UNIQUE_NAME=NFRDSC_ADC'
+#log_archive_dest_2             = 'service=NFRDSC_ADC LGWR ASYNC NOREGISTER VALID_FOR=(ONLINE_LOGFILES,PRIMARY_ROLE) TEMPLATE=/nfrdata/oraarch/NFRDSC_ADC/NFREOS_ADC_%t_%s_%r.log DB_UNIQUE_NAME=NFRDSC_ADC'
+#log_archive_dest_state_2 	= "enable"
+#log_archive_dest_3 		= 'service=NFREOS_STANDBY ARCH SYNC NOAFFIRM delay=0 optional compression=disable max_failure=0 max_connections=1 reopen=300 db_unique_name=NFREOS_STANDBY valid_for=(all_logfiles,primary_role)'
+#log_archive_dest_3 		= "service=NFREOS_STANDBY optional"
+#log_archive_dest_state_3 	= "enable"
+#standby_file_management 	= AUTO
+#db_file_name_convert		= ('...', '...')
+#log_file_name_convert		= ('+NFR_RECO/NFREOS/, '+NFR_T0_REDOA/NFREOS_ADC/', '+NFR_T1DATA/NFREOS/', '+NFR_T0_REDOB/NFREOS_ADC/')
+#fal_server			= NFREOS_STANDBY
+#fal_client			= NFREOS
+#standby_archive_dest		= "+NFR_RECO"
+
+# ##################
+# Shared Server
+# ##################
+dispatchers			= "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP))(SERVICE=NFREOS_ADCXDB))"	

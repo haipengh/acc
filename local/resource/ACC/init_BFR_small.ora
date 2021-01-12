@@ -1,0 +1,31 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/init_BFR_small.ora,v 1.2 2010/11/15 23:01:10 hongh Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : init.ora
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000               2009/05/01 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# ##################
+# undo
+# ##################
+undo_tablespace 		= UNDOTBS1	
+
+# ##################
+# sga/pga
+# ##################
+db_block_size 			= 8192		
+memory_max_target		= 800M
+memory_target			= 600M
+
+# ##################
+# NLS setttings
+# ##################
+nls_date_format 		= "DD-MON-RRRR"
+nls_language 			= AMERICAN	
+nls_territory 			= "New Zealand"		# AMERICA
+

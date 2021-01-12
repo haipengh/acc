@@ -1,0 +1,993 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/kdclor5002.ds.acc.co.nz/listener_kdclor5002.ds.acc.co.nz_ODG.ora,v 1.17 2016/04/14 01:01:18 cvsadmin Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : listener.ora
+# Purpose : this is the listener.ora for database
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000               2010/06/01 Initial creation for database gateway 11gR2
+# -----------------------------------------------------------------------------------------------
+#
+
+LISTENER_ODG =
+ (DESCRIPTION =
+    (ADDRESS_LIST=
+      (ADDRESS=(PROTOCOL=tcp)(HOST=kdclor5002)(PORT=10000))
+      (ADDRESS=(PROTOCOL=IPC)(KEY=EXTPROC))
+    )
+ )
+SID_LIST_LISTENER_ODG =
+  (SID_LIST=
+      # Env01
+      (SID_DESC =
+         (SID_NAME=MDL0114a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0114b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0114a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0114b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0109a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+        (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0109b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      # Env03 - eForms
+      (SID_DESC=
+         (SID_NAME=E03SYBEFM)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+	 (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      # Env05
+      (SID_DESC =
+         (SID_NAME=MDL0514a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0514b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0514a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0514b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0509a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+        (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0509b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      #ENV06 - D09FIN
+      (SID_DESC =
+         (SID_NAME=MDL0614a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0614b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0614a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0614b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0609a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0609b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      # ENV 07 - D21FIN
+      (SID_DESC =
+         (SID_NAME=MDL0714a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0714b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0714a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0714b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0709a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0709b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      # ENV09
+      (SID_DESC =
+         (SID_NAME=MDL0914a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0914b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      ) 
+      (SID_DESC =
+         (SID_NAME=MDL0914a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0914b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0909a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL0909b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      # Env10 - D08FIN
+      (SID_DESC =
+         (SID_NAME=MDL1014a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1014b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      ) 
+      (SID_DESC =
+         (SID_NAME=MDL1014a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1014b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1009a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1009b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      # Env10 - eForms
+      (SID_DESC=
+         (SID_NAME=E10SYBEFM)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+	 (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      #ENV14
+      (SID_DESC =
+         (SID_NAME=MDL1414a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1414b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1414a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1414b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1409a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1409b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      # ENV16 - D05FIN
+      (SID_DESC =
+         (SID_NAME=MDL1614a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1614b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1614a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1614b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1609a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1609b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      # Env17
+      (SID_DESC =
+         (SID_NAME=MDL1714a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1714b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1714a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1714b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1709a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+        (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1709b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      #ENV18
+      (SID_DESC =
+         (SID_NAME=MDL1814a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1814b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1814a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1814b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1809a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+        (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL1809b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      # Env21 - D06FIN
+      (SID_DESC =
+         (SID_NAME=MDL2114a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL2114b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      ) 
+      (SID_DESC =
+         (SID_NAME=MDL2114a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL2114b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL2109a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL2109b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      # Env21 - eForms
+      (SID_DESC=
+         (SID_NAME=E21SYBEFM)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+	 (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      #ENV24 - D04FIN
+      (SID_DESC =
+         (SID_NAME=MDL2414a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL2414b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL2414a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL2414b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL2409a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL2409b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      #ENV26
+      (SID_DESC =
+         (SID_NAME=MDL2614a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL2614b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL2614a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL2614b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL2609a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL2609b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      #ENV27 - D10FIN
+      (SID_DESC =
+         (SID_NAME=MDL2714a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL2714b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL2714a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL2714b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL2709a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL2709b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      #ENV30 - D30FIN
+      (SID_DESC =
+         (SID_NAME=MDL3014a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL3014b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL3014a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL3014b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL3009a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL3009b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      #ENV34
+      (SID_DESC =
+         (SID_NAME=MDL3414a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL3414b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL3414a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL3414b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL3409a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL3409b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      #ENV 49
+      (SID_DESC =
+         (SID_NAME=MDL4914a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL4914b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL4914a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL4914b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL4909a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL4909b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      # Env62
+      (SID_DESC =
+         (SID_NAME=MDL6214a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL6214b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL6214a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL6214b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL6209a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+        (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL6209b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      # Env56 - IPS2
+      (SID_DESC=
+         (SID_NAME=E56IPS2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+	 (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      # ENV69
+      (SID_DESC =
+         (SID_NAME=MDL6914a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL6914b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL6914a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL6914b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL6909a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL6909b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      # Env 71
+      (SID_DESC =
+         (SID_NAME=MDL7109a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7109b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7114a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      ) 
+      (SID_DESC =
+         (SID_NAME=MDL7114b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7114a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7114b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      # ENV 72
+      (SID_DESC =
+         (SID_NAME=MDL7214a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7214b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7214a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7214b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7209a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+        (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7209b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      # Env73 - eForms
+      (SID_DESC=
+         (SID_NAME=E73SYBEFM)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+	 (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      # Env73 - D02FIN
+      (SID_DESC =
+         (SID_NAME=MDL7314a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7314b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7314a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7314b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7309a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7309b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      #ENV74
+      (SID_DESC =
+         (SID_NAME=MDL7414a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7414b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7414a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7414b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7409a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7409b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      #ENV75 - D07FIN
+      (SID_DESC =
+         (SID_NAME=MDL7514a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7514b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7514a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7514b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7509a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7509b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      # Env77
+      (SID_DESC =
+         (SID_NAME=MDL7714a_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7714b_ips2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7714a_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7714b_inv)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7709a)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+        (PROGRAM=dg4sybs)
+      )
+      (SID_DESC =
+         (SID_NAME=MDL7709b)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+         (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+      # Production PiT Mirrow - IPS2
+      (SID_DESC=
+         (SID_NAME=PITIPS2)
+         (ORACLE_HOME=/u001/app/oracle/product/11.2.0.2/gateway)
+	 (ENVS=LD_LIBRARY_PATH=/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/driver/lib:/u001/app/oracle/product/11.2.0.2/gateway/dg4sybs/lib:/u001/app/oracle/product/11.2.0.2/gateway/lib:/usr/lib)
+         (PROGRAM=dg4sybs)
+      )
+  )
+CONNECT_TIMEOUT_LISTENER_ODG=0
+ADR_BASE_LISTENER_ODG=/u001/app/oracle
+

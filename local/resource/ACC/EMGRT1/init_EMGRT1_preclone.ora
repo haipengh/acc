@@ -1,0 +1,49 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/EMGRT1/init_EMGRT1_preclone.ora,v 1.2 2010/09/26 20:55:05 hongh Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : init.ora
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000               2005/06/13 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# ##################
+# common
+# ##################
+ifile=/oracle/local/resource/init_EMG_small.ora
+
+# ##################
+# genernal
+# ##################
+*.db_domain			= ""
+*.db_name			= EMGAT1
+*.db_unique_name		= EMGAT1
+*.service_names			= EMGAT1
+*.instance_name			= EMGAT1
+*.global_names			= FALSE
+#*.local_listener		= EMGAT1
+
+*.control_files			= (/emg023/oradata/EMGRT1/control01.ctl, /emg123/oradata/EMGRT1/control02.ctl, /emg223/oradata/EMGRT1/control03.ctl)
+
+*.core_dump_dest		= "/emg023/oracle/admin/EMGRT1/cdump"
+*.background_dump_dest		= "/emg023/oracle/admin/EMGRT1/bdump"
+*.user_dump_dest		= "/emg023/oracle/admin/EMGRT1/udump"
+*.audit_file_dest		= "/emg023/oracle/admin/EMGRT1/audit"
+
+# ##################
+# data guard section
+# ##################
+*.log_archive_format		= EMGAT1_%t_%s_%r.arc
+*.log_archive_dest_1		= "LOCATION=/emg223/oraarch/EMGRT1 VALID_FOR=(ALL_LOGFILES,ALL_ROLES)"
+*.log_archive_dest_state_1	= enable
+#*.fal_client			= EMGRT1
+#*.fal_server			= EMGAT1_PRIMARY
+#*.log_archive_config		= "DG_CONFIG=(EMGAT1_PRIMARY,EMGRT1)"
+*.standby_archive_dest		= "/emg223/oraarch/STBY_EMGRT1"
+*.standby_file_management	= AUTO
+*.db_file_name_convert		= ('/emg021/oradata/EMGAT1', '/emg023/oradata/EMGRT1', '/emg121/oradata/EMGAT1', '/emg123/oradata/EMGRT1', '/emg221/oradata/EMGAT1', '/emg223/oradata/EMGRT1')
+*.log_file_name_convert		= ('/emg021/oradata/EMGAT1', '/emg023/oradata/EMGRT1', '/emg121/oradata/EMGAT1', '/emg123/oradata/EMGRT1', '/emg221/oradata/EMGAT1', '/emg223/oradata/EMGRT1')
+

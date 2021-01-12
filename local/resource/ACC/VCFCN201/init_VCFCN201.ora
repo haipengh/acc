@@ -1,0 +1,42 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/VCFCN201/init_VCFCN201.ora,v 1.2 2011/01/16 22:26:12 hongh Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : init.ora
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000 H Hong        2005/06/13 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# ##################
+# common
+# ##################
+ifile=/home/users/oraclenfr/local/resource/init_VCF_large.ora
+
+# ##################
+# site specific
+# ##################
+
+# ##################
+# genernal
+# ##################
+db_domain		= ''
+db_name			= VCFCN201
+instance_name		= VCFCN201
+
+control_files		= (/vcfnfr003/oradata/VCFCN201/control01.ctl,/vcfnfr103/oradata/VCFCN201/control02.ctl,/vcfnfr203/oradata/VCFCN201/control03.ctl)
+
+core_dump_dest		= ?/admin/VCFCN201/cdump
+background_dump_dest	= ?/admin/VCFCN201/bdump
+user_dump_dest		= ?/admin/VCFCN201/udump
+audit_file_dest		= ?/admin/VCFCN201/audit
+utl_file_dir		= /tmp, /u999/data/VCFCN201
+
+# ##################
+# data guard section
+# ##################
+log_archive_format	= VCFCN201_%t_%s.arc
+log_archive_dest_1	= 'LOCATION=/vcfnfr203/oraarch/VCFCN201 mandatory'
+log_archive_dest_state_1= enable

@@ -1,0 +1,22 @@
+# This is a sample agent init file that contains the HS parameters that are
+# needed for the Database Gateway for ODBC
+#
+# HS init parameters
+#
+HS_FDS_CONNECT_INFO = hive
+HS_FDS_TRACE_LEVEL = OFF
+# HS_FDS_SHAREABLE_NAME = /usr/lib64/libodbc.so.1
+HS_FDS_SHAREABLE_NAME = /opt/mapr/hiveodbc/lib/64/libmaprhiveodbc64.so
+HS_TRANSACTION_MODEL=READ_ONLY_AUTOCOMMIT
+HS_LANGUAGE=AMERICAN_AMERICA.WE8ISO8859P1
+#
+# ODBC specific environment variables
+#
+set ODBCINI=/home/oracle/.odbc.ini
+#
+# Environment variables required for the non-Oracle system
+#
+## set <envvar>=<value>
+set LD_LIBRARY_PATH=/opt/mapr/hiveodbc/lib/64:/u002/app/oracle/product/11.2.0.4/gateway/lib:/usr/lib64
+set MAPRHIVEINI=/home/oracle/.mapr.hiveodbc.ini
+

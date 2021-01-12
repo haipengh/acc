@@ -1,0 +1,14 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/ODG/tnsnames_ODG.ora,v 1.1 2014/05/19 21:17:21 hongh Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : tnsnames.ora
+# Purpose : this is the tnsnames.ora for database
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000               2005/06/14 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+ifile=/u001/local/resource/ODG/tnsnames_odg_env17.ora

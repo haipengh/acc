@@ -1,0 +1,9 @@
+include = ${AM_LOCAL_TOP}/resource/mars/amenv_vcf_mars.txt
+#include = ${AM_LOCAL_TOP}/resource/mars/amenv_hcm_mars.txt
+include = ${AM_LOCAL_TOP}/resource/mars/amenv_ibm_mars.txt
+#include = ${AM_LOCAL_TOP}/resource/mars/amenv_oem_mars.txt
+#include = ${AM_LOCAL_TOP}/resource/mars/amenv_cms_mars.txt
+#include = ${AM_LOCAL_TOP}/resource/mars/amenv_emg_mars.txt
+#include = ${AM_LOCAL_TOP}/resource/mars/amenv_esb_mars.txt
+#include = ${AM_LOCAL_TOP}/resource/mars/amenv_fin_mars.txt
+

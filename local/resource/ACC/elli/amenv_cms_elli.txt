@@ -1,0 +1,6 @@
+UEOS1     :ENV07     ::::::UEFM1 :      :EOS::::::N:N:Env7 (UAT) - EOS (moved to RAC)
+UEFM1     :ENV07     ::::::      :UEOS1 :EFM::::::N:N:Env7 (UAT) - eForms (decommissioned)
+SCMS16    :ENV16     ::::::SEFM16:      :EOS::::::N:N:Env16 - EOS (moved to RAC)
+SEFM16    :ENV16     ::::::      :SCMS16:EFM::::::N:N:Env16 - eForms (moved to RAC)
+KEOS1     :ENV56     ::::::      :      :EOS::::::N:N:Env56 (TRDA) - EOS (moved to RAC)
+SCMS34    :ENV34     ::::::      :      :EOS::::::N:N:Env34 - EOS (moved to RAC)

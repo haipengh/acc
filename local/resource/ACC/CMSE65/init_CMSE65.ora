@@ -1,0 +1,38 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/CMSE65/init_CMSE65.ora,v 1.2 2012/03/14 02:01:26 hongh Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : init.ora
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000 H Hong        2005/06/13 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# ##################
+# common
+# ##################
+ifile=/oracle/local/resource/init_VCF_small.ora
+
+# ##################
+# genernal
+# ##################
+db_domain		= ''
+db_name			= CMSE65
+instance_name		= CMSE65
+
+control_files		= (/u001/oradata/CMSE65/control01.ctl,/vcf165/oradata/CMSE65/control02.ctl,/vcf265/oradata/CMSE65/control03.ctl)
+
+core_dump_dest		= ?/admin/CMSE65/cdump
+background_dump_dest	= ?/admin/CMSE65/bdump
+user_dump_dest		= ?/admin/CMSE65/udump
+audit_file_dest		= ?/admin/CMSE65/audit
+utl_file_dir		= /tmp, /data/CMSE65
+
+# ##################
+# data guard section
+# ##################
+log_archive_format	= CMSE65_%t_%s.arc
+log_archive_dest_1	= 'LOCATION=/vcf265/oraarch/CMSE65 mandatory'
+log_archive_dest_state_1= enable

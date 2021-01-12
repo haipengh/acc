@@ -1,0 +1,15 @@
+UATCMS1   :ENV03     ::::::      :      :VCF::vcfappl::${HOME}/vcf/${MODULE_TAG}:vcfappl:JOB_PRI_BK_DB_ONLINE_1COPYS:JOB_PRI_BK_ARCHLOG:Env 3 - VCF 
+CMSE16    :ENV16     ::::::      :      :VCF::vcfappl::${HOME}/vcf/${MODULE_TAG}:vcfappl:N:N:Env 16 - VCF - decommissioned
+CMST1A    :ENV31     ::::::      :      :VCF::vcfappl::${HOME}/vcf/${MODULE_TAG}:vcfappl:JOB_PRI_BK_DB_ONLINE_1COPYS:JOB_PRI_BK_ARCHLOG:Env 31 - VCF - shutdown
+F1BCMS1   :ENV18     ::::::      :      :VCF::vcfappl::${HOME}/vcf/${MODULE_TAG}:vcfappl:JOB_PRI_BK_DB_ONLINE_1COPYS:JOB_PRI_BK_ARCHLOG:Env 18 (FIT1B) - VCF - shutdown
+TRDCMS1   :ENV56     ::::::      :      :VCF::vcfappl::${HOME}/vcf/${MODULE_TAG}:vcfappl:JOB_PRI_BK_DB_ONLINE_1COPYS:JOB_PRI_BK_ARCHLOG:Env 56 (TRDA) - VCF - shutdown
+VF001E15  :ENV15     ::::::      :      :VCF::vcfappl::${HOME}/vcf/${MODULE_TAG}:vcfappl:JOB_PRI_BK_DB_ONLINE_1COPYS:JOB_PRI_BK_ARCHLOG:Env 15 (Drafts) - VCF - shutdown
+VF101E15  :ENV15     ::::::      :      :VCF::vcfappl::${HOME}/vcf/${MODULE_TAG}:vcfappl:JOB_PRI_BK_DB_ONLINE_1COPYS:JOB_PRI_BK_ARCHLOG:Env 15 (121) - VCF - shutdown
+VF201E15  :ENV15     ::::::      :      :VCF::vcfappl::${HOME}/vcf/${MODULE_TAG}:vcfappl:JOB_PRI_BK_DB_ONLINE_1COPYS:JOB_PRI_BK_ARCHLOG:Env 15 (122) - VCF - shutdown
+VF001E35  :ENV35     ::::::      :      :VCF::vcfappl::${HOME}/vcf/${MODULE_TAG}:vcfappl:JOB_PRI_BK_DB_ONLINE_1COPYS:JOB_PRI_BK_ARCHLOG:Env 35 (Drafts) - VCF
+VF101E35  :ENV35     ::::::      :      :VCF::vcfappl::${HOME}/vcf/${MODULE_TAG}:vcfappl:JOB_PRI_BK_DB_ONLINE_1COPYS:JOB_PRI_BK_ARCHLOG:Env 35 (121) - VCF
+VF201E35  :ENV35     ::::::      :      :VCF::vcfappl::${HOME}/vcf/${MODULE_TAG}:vcfappl:JOB_PRI_BK_DB_ONLINE_1COPYS:JOB_PRI_BK_ARCHLOG:Env 35 (122) - VCF
+CMSD1A    :ENV??     ::::::      :      :VCF::vcfappl::${HOME}/vcf/${MODULE_TAG}:vcfappl:JOB_PRI_BK_DB_ONLINE_1COPYS:JOB_PRI_BK_ARCHLOG:CMSD1A - VCF - shutdown
+CITCMS1   :ENV??     ::::::      :      :VCF::vcfappl::${HOME}/vcf/${MODULE_TAG}:vcfappl:JOB_PRI_BK_DB_ONLINE_1COPYS:JOB_PRI_BK_ARCHLOG:CITCMS1 - VCF - shutdown
+MIGCMS1   :ENV??     ::::::      :      :VCF::vcfappl::${HOME}/vcf/${MODULE_TAG}:vcfappl:JOB_PRI_BK_DB_ONLINE_1COPYS:JOB_PRI_BK_ARCHLOG:MIGCMS1 - VCF - shutdown
+

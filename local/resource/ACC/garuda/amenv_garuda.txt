@@ -1,0 +1,1 @@
+include = ${AM_LOCAL_TOP}/resource/garuda/amenv_cms_garuda.txt

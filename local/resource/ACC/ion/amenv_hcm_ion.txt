@@ -1,0 +1,6 @@
+HCSUP     :HCSUP     ::::::::HCM::hcmappl::${HOME}/hcm/${MODULE_TAG}:hcmappl: : :Production Support - HRIS
+HCUAT     :HCUAT     ::::::::HCM::hcmappl::${HOME}/hcm/${MODULE_TAG}:hcmappl: : :UAT - HRIS
+HCTST     :HCTST     ::::::::HCM::hcmappl::${HOME}/hcm/${MODULE_TAG}:hcmappl:JOB_PRI_BK_DB_ONLINE_COMP_2WEEKS: :Test - HRIS
+HCDEV     :HCDEV     ::::::::HCM::hcmappl::${HOME}/hcm/${MODULE_TAG}:hcmappl:JOB_PRI_BK_DB_ONLINE_COMP_2WEEKS: :Development - HRIS
+HCDM2     :HCDM2     ::::::::HCM::hcmappl::${HOME}/hcm/${MODULE_TAG}:hcmappl: : :Demo - HRIS
+HCSYS     :HCSYS     ::::::::HCM::hcmappl::${HOME}/hcm/${MODULE_TAG}:hcmappl:N:N:Sys - HRIS

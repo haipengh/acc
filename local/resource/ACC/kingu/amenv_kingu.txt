@@ -1,0 +1,2 @@
+include = ${AM_LOCAL_TOP}/resource/kingu/amenv_vcf_kingu.txt
+include = ${AM_LOCAL_TOP}/resource/kingu/amenv_wcm_kingu.txt

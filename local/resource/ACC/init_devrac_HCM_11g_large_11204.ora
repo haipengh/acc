@@ -1,0 +1,249 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/init_devrac_HCM_11g_large_11204.ora,v 1.1 2016/10/25 01:09:40 cvsadmin Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : init.ora
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000 H Hong        2009/05/01 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# ##################
+# names
+# ##################
+global_names 			= FALSE
+
+# ##################
+# RAC
+# ##################
+cluster_database		= TRUE		
+#cluster_database_instances	= 16
+
+# ##################
+# file creation
+# ##################
+db_create_file_dest		= "+DATA"
+db_create_online_log_dest_1	= "+DATA"	
+db_create_online_log_dest_2	= "+RECO"
+
+# ##################
+# undo
+# ##################
+undo_management 		= AUTO
+#undo_retention 		= 0		
+#undo_suppress_errors 		= TRUE		
+
+# ##################
+# security
+# ##################
+audit_trail 			= DB_EXTENDED	# OS
+audit_sys_operations 		= TRUE
+sec_case_sensitive_logon	= TRUE
+sec_max_failed_login_attempts	= 10
+#sec_protocol_error_further_action	= CONTINUE	
+#sec_protocol_error_trace_action	= TRACE		
+sec_return_server_release_banner 	= FALSE		
+
+# ##################
+# diagnostic
+# ##################
+max_dump_file_size 		= 10240		
+control_management_pack_access	= DIAGNOSTIC+TUNING	
+#trace_enabled			= TRUE		
+#tracefile_identifier		= ""
+#utl_file_dir 			= /tmp
+
+# ##################
+# optimizer
+# ##################
+optimizer_mode 			= ALL_ROWS
+optimizer_features_enable	= 11.2.0.4
+#optimizer_capture_sql_plan_baselines	= FALSE	
+#optimizer_use_sql_plan_baselines	= TRUE	
+#optimizer_use_pending_statistics	= FALSE
+optimizer_use_invisible_indexes	= FALSE
+optimizer_index_cost_adj	= 50
+#_optimizer_push_pred_cost_based	= FALSE		
+#_b_tree_bitmap_plans 		= FALSE		
+#_optimizer_order_by_elimination_enabled = false	
+#_optim_peek_user_binds		= FALSE	
+
+# ##################
+# miscellaneous
+# ##################
+compatible 			= 11.2.0.0.0
+os_authent_prefix 		= OPS$
+O7_DICTIONARY_ACCESSIBILITY 	= FALSE		
+remote_login_passwordfile 	= EXCLUSIVE	
+#remote_os_authent 		= FALSE
+remote_os_roles			= FALSE
+#query_rewrite_enabled 		= TRUE	
+#query_rewrite_integrity	= enforced	
+parallel_adaptive_multi_user 	= TRUE		
+#hash_join_enabled 		= TRUE		
+star_transformation_enabled 	= FALSE
+filesystemio_options		= setall	
+#disk_asynch_io 		= TRUE
+_enable_row_shipping		= FALSE		
+_trace_files_public 		= FALSE		
+statistics_level		= TYPICAL		# for 11.2.0.3.x, if patch 13004894 hasn't been applied, might get error for statement: SELECT COUNT(*) FROM SYSADM.PS_HRS_JO_ROWEXT_I WHERE HRS_JOB_OPENING_ID = 10623;
+							# ORA-07445: Exception Encountered: Core Dump [kxhrInit()+2336] (Doc ID 1454075.1)
+							# workaround: set statistics_level to 'TYPICAL'
+timed_statistics		= TRUE		
+log_checkpoints_to_alert	= TRUE
+#enable_ddl_logging		= FALSE
+#sql92_security			= TRUE
+db_ultra_safe			= DATA_ONLY
+#db_block_checksum		= TRUE		
+db_block_checking		= LOW
+#db_lost_write_protect		= TYPICAL
+skip_unusable_indexes		= TRUE		
+#recyclebin			= ON	
+deferred_segment_creation  	= TRUE	
+_datafile_write_errors_crash_instance = TRUE
+
+# ##################
+# sga/pga
+# ##################
+db_block_size 			= 8192	
+#memory_max_target		= 2G
+#memory_target			= 1G	
+sga_max_size			= 2G
+sga_target			= 2G
+#db_cache_size 			= 400M
+#java_pool_size 			= 100M
+#large_pool_size 		= 50M		
+#shared_pool_size 		= 400M
+#shared_pool_reserved_size 	= 50M
+#db_nk_cache_size 		= 50M		
+#db_keep_cache_size		= 		
+#db_recycle_cache_size		=		
+#object_cache_max_size_percent	= 10		
+#object_cache_optimal_size	= 102400	
+db_file_multiblock_read_count 	= 8	
+db_files 			= 2048
+db_writer_processes 		= 2		
+#dbwr_io_slaves 		= 2
+workarea_size_policy		= AUTO		
+pga_aggregate_target 		= 400M		
+#sort_area_size 		= 1048576
+#sort_area_retained_size	= 1048576
+#bitmap_merge_area_size 	= 1048576
+#create_bitmap_area_size 	= 8388608
+#hash_area_size			= 2097152
+#max_enabled_roles 		= 60		
+cursor_sharing			= FORCE
+session_max_open_files		= 20		
+session_cached_cursors		= 200		
+open_cursors 			= 1200		# 7000	
+processes 			= 400		# 1500
+sessions			= 800		
+#enqueue_resources 		= 32000		
+transactions			= 1600		
+dml_locks 			= 8000		
+ddl_lock_timeout		= 0
+job_queue_processes 		= 10		
+aq_tm_processes 		= 2
+#job_queue_interval 		= 120		
+control_file_record_keep_time	= 14
+resumable_timeout		= 0		
+#shared_servers			= 10
+
+# ##################
+# redo log
+# ##################
+log_buffer 			= 10485760
+fast_start_mttr_target		= 600
+log_checkpoint_interval 	= 0		
+log_checkpoint_timeout		= 900		
+
+# ##################
+# flashback
+# ##################
+db_flashback_retention_target	= 1440
+db_recovery_file_dest_size	= 1000G
+db_recovery_file_dest		= "+RECO"
+
+# ##################
+# parallelism
+# ##################
+#parallel_adaptive_multi_user 	= TRUE
+#parallel_automatic_tuning 	= TRUE		
+parallel_execution_message_size = 8192
+parallel_max_servers 		= 8
+parallel_min_servers 		= 0
+
+# ##################
+# result cache
+# ##################
+result_cache_max_result		= 10
+result_cache_max_size		= 100M
+result_cache_mode               = MANUAL        # AUTO
+result_cache_remote_expiration	= 0
+
+# ##################
+# securefile
+# ##################
+db_securefile			= PERMITTED
+
+# ##################
+# streams section
+# ##################
+#log_parallelism                 = 1		
+#logmnr_max_persistent_sessions  = 4		
+open_links                      = 4		
+_first_spare_parameter		= 50
+_kghdsidx_count			= 1
+_job_queue_interval		= 1		
+streams_pool_size		= 0
+
+# ##################
+# data guard section
+# ##################
+#log_archive_start 		= TRUE		
+#log_archive_config		= "DG_CONFIG=(<db_unique_name_of_primary>, <db_unique_name_of_standby>)"
+#remote_archive_enable 		= TRUE
+log_archive_max_processes 	= 2
+log_archive_trace 		= 2048
+#log_archive_min_succeed_dest	= 1		
+archive_lag_target		= 900		
+log_archive_format 		= %d_%t_%s_%r.arc	
+
+# ##################
+# NLS setttings
+# ##################
+nls_date_format 		= "DD-MON-RRRR"
+nls_language 			= AMERICAN	
+nls_territory 			= "New Zealand"
+nls_comp			= "BINARY"
+nls_sort			= "BINARY"
+
+# ##################
+# Shared Server
+# ##################
+#max_dispatchers		= 1
+shared_servers                  = 0
+
+# ##################
+# Tape IO
+# ##################
+tape_asynch_io			= TRUE
+backup_tape_io_slaves         	= TRUE
+
+# ##################
+# events
+# ##################
+#event="24040 trace name context forever, level 10"
+
+# ##################
+# peoplesoft specific
+# E-ORA Advice for the PeopleSoft Oracle DBA (Doc ID 1445965.1)
+# ##################
+optimizer_dynamic_sampling      = 0 
+_optim_peek_user_binds          = FALSE
+_optimizer_push_pred_cost_based = FALSE
+_gby_hash_aggregation_enabled   = FALSE
+_unnest_subquery                = FALSE
+nls_length_semantics		= CHAR		# required for unicode database on peoplesoft 9.0+

@@ -1,0 +1,48 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/EMGWP1/init_EMGWP1_ion.ora,v 1.1 2009/10/13 23:42:41 hongh Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : init.ora
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000               2005/06/13 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# ##################
+# common
+# ##################
+ifile=/oracle/local/resource/init_EMG_large.ora
+
+# ##################
+# genernal
+# ##################
+*.db_domain			= ""
+*.db_name			= EMGWP1
+*.db_unique_name		= EMGWP1_ION
+*.service_names			= EMGWP1
+*.instance_name			= EMGWP1
+*.global_names			= TRUE
+#*.local_listener		= EMGWP1
+
+*.control_files			= (/emg002/oradata/EMGWP1/control01.ctl, /emg102/oradata/EMGWP1/control02.ctl, /emg202/oradata/EMGWP1/control03.ctl)
+
+*.core_dump_dest		= "/emg002/oracle/admin/EMGWP1/cdump"
+*.background_dump_dest		= "/emg002/oracle/admin/EMGWP1/bdump"
+*.user_dump_dest		= "/emg002/oracle/admin/EMGWP1/udump"
+*.audit_file_dest		= "/emg002/oracle/admin/EMGWP1/audit"
+
+# ##################
+# data guard section
+# ##################
+*.log_archive_format		= %t_%s_%r.arc		# keep with production format
+*.log_archive_dest_1		= "LOCATION=/emg202/oraarch/EMGWP1 VALID_FOR=(ALL_LOGFILES,ALL_ROLES)"
+*.log_archive_dest_state_1	= enable
+*.fal_client			= EMGWP1_ION
+*.fal_server			= EMGWP1_DUMMY
+*.log_archive_config		= "DG_CONFIG=(EMGWP1_DUMMY,EMGWP1_ION)"
+*.standby_archive_dest		= "/emg202/oraarch/EMGWP1"
+*.standby_file_management	= AUTO
+db_file_name_convert		= ('/emg002/oradata/EMGWP1', '/emg002/oradata/EMGWP1', '/emg102/oradata/EMGWP1', '/emg102/oradata/EMGWP1', '/emg202/oradata/EMGWP1', '/emg202/oradata/EMGWP1')
+log_file_name_convert		= ('/emg002/oradata/EMGWP1', '/emg002/oradata/EMGWP1', '/emg102/oradata/EMGWP1', '/emg102/oradata/EMGWP1', '/emg202/oradata/EMGWP1', '/emg202/oradata/EMGWP1')

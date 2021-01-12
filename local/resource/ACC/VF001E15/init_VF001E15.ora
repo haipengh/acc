@@ -1,0 +1,38 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/VF001E15/init_VF001E15.ora,v 1.1 2009/10/13 02:31:14 hongh Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : init.ora
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000 H Hong        2005/06/13 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# ##################
+# common
+# ##################
+ifile=/oracle/local/resource/init_VCF_large.ora
+
+# ##################
+# genernal
+# ##################
+db_domain		= ''
+db_name			= VF001E15
+instance_name		= VF001E15
+
+control_files		= (/vcf015/oradata/VF001E15/control01.ctl,/vcf115/oradata/VF001E15/control02.ctl,/vcf215/oradata/VF001E15/control03.ctl)
+
+core_dump_dest		= ?/admin/VF001E15/cdump
+background_dump_dest	= ?/admin/VF001E15/bdump
+user_dump_dest		= ?/admin/VF001E15/udump
+audit_file_dest		= ?/admin/VF001E15/audit
+utl_file_dir		= /tmp, /data/VF001E15
+
+# ##################
+# data guard section
+# ##################
+log_archive_format	= VF001E15_%t_%s.arc
+log_archive_dest_1	= 'LOCATION=/vcf215/oraarch/VF001E15 mandatory'
+log_archive_dest_state_1= enable

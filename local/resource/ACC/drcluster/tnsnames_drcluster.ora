@@ -1,0 +1,488 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/drcluster/tnsnames_drcluster.ora,v 1.18 2016/02/24 01:29:53 cvsadmin Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : listener.ora
+# Purpose : this is the listener.ora for database
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000 H Hong        2005/06/14 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# tnsnames.ora file for localhost
+#
+#    DB        SID          Host         Port    Valid
+#    --------  -----------  ------------ ------- -----
+#    NFREOS    *            *            *       Y
+#    NFRDSC    *            *            *       Y
+#    NFREFM    *            *            *       Y
+#    NFREGW    *            *            *       Y
+#    NFRPRTL   *            *            *       Y
+#    NFRESB    *            *            *       Y
+#    NFRIDM    *            *            *       Y
+#    NFRHCM    *            *            *       Y
+#    NFRVCF    *            *            *       Y
+#
+
+# remote listener 
+LISTENER_GRID =
+   (DESCRIPTION =
+      (ADDRESS_LIST =
+         (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.50)(PORT = 1521))
+         (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.51)(PORT = 1521))
+         (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.52)(PORT = 1521))
+      )
+   )
+
+# local listener 
+LISTENER_NODE1 =
+   (DESCRIPTION =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0001-vip)(PORT = 1521))
+   )
+
+LISTENER_NODE2 =
+   (DESCRIPTION =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0002-vip)(PORT = 1521))
+   )
+
+LISTENER_NODE3 =
+   (DESCRIPTION =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0003-vip)(PORT = 1521))
+   )
+
+# #################
+# NFREOS
+# #################
+EOS_NFR, EOS_NFR.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = drcluster-scan)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = EOS_NFR.DS.ACC.CO.NZ))
+  )
+
+NFREOS, NFREOS.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.50)(PORT = 1521))
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.51)(PORT = 1521))
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.52)(PORT = 1521))
+    (LOAD_BALANCE = yes)
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFREOS.DS.ACC.CO.NZ))
+  )
+
+NFREOS1, NFREOS1.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0001-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFREOS.DS.ACC.CO.NZ)(INSTANCE_NAME = NFREOS1))
+  )
+
+NFREOS2, NFREOS2.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0002-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFREOS.DS.ACC.CO.NZ)(INSTANCE_NAME = NFREOS2))
+  )
+
+NFREOS3, NFREOS3.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0003-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFREOS.DS.ACC.CO.NZ)(INSTANCE_NAME = NFREOS3))
+  )
+
+# #################
+# NFREFM
+# #################
+NFREFM, NFREFM.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.50)(PORT = 1521))
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.51)(PORT = 1521))
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.52)(PORT = 1521))
+    (LOAD_BALANCE = yes)
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFREFM.DS.ACC.CO.NZ))
+  )
+
+NFREFM1, NFREFM1.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0001-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFREFM.DS.ACC.CO.NZ)(INSTANCE_NAME = NFREFM1))
+  )
+
+NFREFM2, NFREFM2.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0002-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFREFM.DS.ACC.CO.NZ)(INSTANCE_NAME = NFREFM2))
+  )
+
+NFREFM3, NFREFM3.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0003-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFREFM.DS.ACC.CO.NZ)(INSTANCE_NAME = NFREFM3))
+  )
+
+# #################
+# NFRDSC
+# #################
+NFRDSC, NFRDSC.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.50)(PORT = 1521))
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.51)(PORT = 1521))
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.52)(PORT = 1521))
+    (LOAD_BALANCE = yes)
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRDSC.DS.ACC.CO.NZ))
+  )
+
+NFRDSC1, NFRDSC1.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0001-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRDSC.DS.ACC.CO.NZ)(INSTANCE_NAME = NFRDSC1))
+  )
+
+NFRDSC2, NFRDSC2.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0002-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRDSC.DS.ACC.CO.NZ)(INSTANCE_NAME = NFRDSC2))
+  )
+
+NFRDSC3, NFRDSC3.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0003-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRDSC.DS.ACC.CO.NZ)(INSTANCE_NAME = NFRDSC3))
+  )
+
+# #################
+# NFREGW
+# #################
+TREE_NFR, TREE_NFR.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = drcluster-scan)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = TREE_NFR.DS.ACC.CO.NZ))
+  )
+
+ESS_NFR, ESS_NFR.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = drcluster-scan)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = ESS_NFR.DS.ACC.CO.NZ))
+  )
+
+NFREGW, NFREGW.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.50)(PORT = 1521))
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.51)(PORT = 1521))
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.52)(PORT = 1521))
+    (LOAD_BALANCE = yes)
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFREGW.DS.ACC.CO.NZ))
+  )
+
+NFREGW1, NFREGW1.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0001-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFREGW.DS.ACC.CO.NZ)(INSTANCE_NAME = NFREGW1))
+  )
+
+NFREGW2, NFREGW2.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0002-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFREGW.DS.ACC.CO.NZ)(INSTANCE_NAME = NFREGW2))
+  )
+
+NFREGW3, NFREGW3.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0003-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFREGW.DS.ACC.CO.NZ)(INSTANCE_NAME = NFREGW3))
+  )
+
+# #################
+# NFRPRTL
+# #################
+PRTL_NFR, PRTL_NFR.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = drcluster-scan)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = PRTL_NFR.DS.ACC.CO.NZ))
+  )
+
+NFRPRTL, NFRPRTL.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = drcluster-scan)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRPRTL.DS.ACC.CO.NZ))
+  )
+
+NFRPRTL1, NFRPRTL1.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0001-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRPRTL.DS.ACC.CO.NZ)(INSTANCE_NAME = NFRPRTL1))
+  )
+
+NFRPRTL2, NFRPRTL2.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0002-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRPRTL.DS.ACC.CO.NZ)(INSTANCE_NAME = NFRPRTL2))
+  )
+
+NFRPRTL3, NFRPRTL3.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0003-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRPRTL.DS.ACC.CO.NZ)(INSTANCE_NAME = NFRPRTL3))
+  )
+
+# #################
+# NFRESB
+# #################
+ESB_NFR, ESB_NFR.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = drcluster-scan)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = ESB_NFR.DS.ACC.CO.NZ))
+  )
+
+NFRESB, NFRESB.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = drcluster-scan)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRESB.DS.ACC.CO.NZ))
+  )
+
+NFRESB1, NFRESB1.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0001-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRESB.DS.ACC.CO.NZ)(INSTANCE_NAME = NFRESB1))
+  )
+
+NFRESB2, NFRESB2.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0002-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRESB.DS.ACC.CO.NZ)(INSTANCE_NAME = NFRESB2))
+  )
+
+NFRESB3, NFRESB3.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0003-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRESB.DS.ACC.CO.NZ)(INSTANCE_NAME = NFRESB3))
+  )
+
+# #################
+# NFRIDM
+# #################
+IDM_NFR, IDM_NFR.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = drcluster-scan)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = IDM_NFR.DS.ACC.CO.NZ))
+  )
+
+NFRIDM, NFRIDM.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = drcluster-scan)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRIDM.DS.ACC.CO.NZ))
+  )
+
+NFRIDM1, NFRIDM1.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0001-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRIDM.DS.ACC.CO.NZ)(INSTANCE_NAME = NFRIDM1))
+  )
+
+NFRIDM2, NFRIDM2.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0002-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRIDM.DS.ACC.CO.NZ)(INSTANCE_NAME = NFRIDM2))
+  )
+
+NFRIDM3, NFRIDM3.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0003-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRIDM.DS.ACC.CO.NZ)(INSTANCE_NAME = NFRIDM3))
+  )
+
+# #################
+# NFRHCM
+# #################
+HCM_NFR, HCM_NFR.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = drcluster-scan)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = HCM_NFR.DS.ACC.CO.NZ))
+  )
+
+NFRHCM, NFRHCM.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.50)(PORT = 1521))
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.51)(PORT = 1521))
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.52)(PORT = 1521))
+    (LOAD_BALANCE = yes)
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRHCM.DS.ACC.CO.NZ))
+  )
+
+NFRHCM1, NFRHCM1.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0001-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRHCM.DS.ACC.CO.NZ)(INSTANCE_NAME = NFRHCM1))
+  )
+
+NFRHCM2, NFRHCM2.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0002-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRHCM.DS.ACC.CO.NZ)(INSTANCE_NAME = NFRHCM2))
+  )
+
+NFRHCM3, NFRHCM3.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0003-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRHCM.DS.ACC.CO.NZ)(INSTANCE_NAME = NFRHCM3))
+  )
+
+# #################
+# RMAN catalog
+# #################
+PGCREPO, PGCREPO.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = pgcrepo.ds.acc.co.nz )(PORT = 10001))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = PGCREPO.ds.acc.co.nz))
+  )
+
+# #################
+# RPRTL - Portal DR
+# #################
+RPRTL_PRD, RPRTL_PRD.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.50)(PORT = 1521))
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.51)(PORT = 1521))
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.52)(PORT = 1521))
+    (LOAD_BALANCE = yes)
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = RPRTL_PRD.DS.ACC.CO.NZ))
+  )
+
+RPRTL, RPRTL.ds.acc.co.nz, RPRTLPRIM, RPRTLPRIM.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.50)(PORT = 1521))
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.51)(PORT = 1521))
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.52)(PORT = 1521))
+    (LOAD_BALANCE = yes)
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = RPRTL.DS.ACC.CO.NZ))
+  )
+
+# #################
+# NFRVCF
+# #################
+VCF_NFR, VCF_NFR.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = drcluster-scan)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = VCF_NFR.DS.ACC.CO.NZ))
+  )
+
+NFRVCF, NFRVCF.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.50)(PORT = 1521))
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.51)(PORT = 1521))
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.52)(PORT = 1521))
+    (LOAD_BALANCE = yes)
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRVCF.DS.ACC.CO.NZ))
+  )
+
+NFRVCF1, NFRVCF1.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0001-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRVCF.DS.ACC.CO.NZ)(INSTANCE_NAME = NFRVCF1))
+  )
+
+NFRVCF2, NFRVCF2.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0002-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRVCF.DS.ACC.CO.NZ)(INSTANCE_NAME = NFRVCF2))
+  )
+
+NFRVCF3, NFRVCF3.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0003-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRVCF.DS.ACC.CO.NZ)(INSTANCE_NAME = NFRVCF3))
+  )
+
+# #################
+# NFRCDB
+# #################
+NFRCDB, NFRCDB.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.50)(PORT = 1521))
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.51)(PORT = 1521))
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.52)(PORT = 1521))
+    (LOAD_BALANCE = yes)
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRCDB))
+  )
+
+NFRCDB1, NFRCDB1.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0001-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRCDB)(INSTANCE_NAME = NFRCDB1))
+  )
+
+NFRCDB2, NFRCDB2.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0002-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRCDB)(INSTANCE_NAME = NFRCDB2))
+  )
+
+NFRCDB3, NFRCDB3.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0003-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFRCDB)(INSTANCE_NAME = NFRCDB3))
+  )
+
+# #################
+# NFINDSC
+# #################
+NFINDSC, NFINDSC.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.50)(PORT = 1521))
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.51)(PORT = 1521))
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.52)(PORT = 1521))
+    (LOAD_BALANCE = yes)
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFINDSC))
+  )
+
+NFINDSC1, NFINDSC1.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0001-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFINDSC)(INSTANCE_NAME = NFINDSC1))
+  )
+
+NFINDSC2, NFINDSC2.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0002-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFINDSC)(INSTANCE_NAME = NFINDSC2))
+  )
+
+NFINDSC3, NFINDSC3.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0003-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = NFINDSC)(INSTANCE_NAME = NFINDSC3))
+  )
+
+# #################
+# TMPDSC
+# #################
+TMPDSC, TMPDSC.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.50)(PORT = 1521))
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.51)(PORT = 1521))
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.12.100.52)(PORT = 1521))
+    (LOAD_BALANCE = yes)
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = TMPDSC.DS.ACC.CO.NZ))
+  )
+
+TMPDSC1, TMPDSC1.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0001-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = TMPDSC.DS.ACC.CO.NZ)(INSTANCE_NAME = TMPDSC1))
+  )
+
+TMPDSC2, TMPDSC2.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0002-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = TMPDSC.DS.ACC.CO.NZ)(INSTANCE_NAME = TMPDSC2))
+  )
+
+TMPDSC3, TMPDSC3.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adclor0003-vip)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = TMPDSC.DS.ACC.CO.NZ)(INSTANCE_NAME = TMPDSC3))
+  )
+
+# #################
+# external
+# #################
+ifile=/nfr001/local/resource/drcluster/tnsnames_drcluster_external.ora
+

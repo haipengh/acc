@@ -1,0 +1,17 @@
+[req]
+prompt = no
+default_md = sha256
+distinguished_name = dn
+req_extensions = ext
+
+[dn]
+CN = app-layer-oracleebs-test.ds.acc.co.nz
+O = Accident Compensation Corporation 
+OU = Environments
+L = Wellington
+ST = Wellington
+C = NZ
+
+[ext]
+
+subjectAltName = DNS:app-layer-oracleebs-test.ds.acc.co.nz 

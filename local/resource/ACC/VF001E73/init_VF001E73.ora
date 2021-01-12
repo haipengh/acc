@@ -1,0 +1,42 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/VF001E73/init_VF001E73.ora,v 1.2 2012/03/14 02:21:25 hongh Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : init.ora
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000 H Hong        2005/06/13 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# ##################
+# common
+# ##################
+ifile=/oracle/local/resource/init_VCF_small.ora
+
+# ##################
+# site specific
+# ##################
+
+# ##################
+# genernal
+# ##################
+db_domain		= ''
+db_name			= VF001E73
+instance_name		= VF001E73
+
+control_files		= (/u001/oradata/VF001E73/control01.ctl,/vcf173/oradata/VF001E73/control02.ctl,/vcf273/oradata/VF001E73/control03.ctl)
+
+core_dump_dest		= ?/admin/VF001E73/cdump
+background_dump_dest	= ?/admin/VF001E73/bdump
+user_dump_dest		= ?/admin/VF001E73/udump
+audit_file_dest		= ?/admin/VF001E73/audit
+utl_file_dir		= /tmp, /data/VF001E73
+
+# ##################
+# data guard section
+# ##################
+log_archive_format	= VF001E73_%t_%s.arc
+log_archive_dest_1	= 'LOCATION=/vcf273/oraarch/VF001E73 mandatory'
+log_archive_dest_state_1= enable

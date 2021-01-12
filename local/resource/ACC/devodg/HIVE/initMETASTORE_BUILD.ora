@@ -1,0 +1,16 @@
+# HS init parameters
+#
+HS_FDS_CONNECT_INFO = METASTORE_BUILD
+HS_FDS_TRACE_LEVEL =  OFF
+HS_FDS_SHAREABLE_NAME = /usr/lib64/libodbc.so
+HS_TRANSACTION_MODEL=READ_ONLY_AUTOCOMMIT
+HS_LANGUAGE=AMERICAN_AMERICA.WE8ISO8859P1
+#
+# ODBC specific environment variables
+#
+set ODBCINI=/home/oracle/.odbc.ini
+#
+# Environment variables required for the non-Oracle system
+#
+# Do not set as per SR_3-22695290911
+##set LD_LIBRARY_PATH=/usr/lib64:/u002/app/oracle/product/11.2.0.4/gateway/hs/lib:/u002/app/oracle/product/11.2.0.4/gateway/lib

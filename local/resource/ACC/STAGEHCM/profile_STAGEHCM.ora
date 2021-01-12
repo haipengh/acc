@@ -1,0 +1,125 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/STAGEHCM/profile_STAGEHCM.ora,v 1.1 2014/11/20 22:04:40 cvsadmin Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : init.ora
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000 H Hong        2005/06/13 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+*._datafile_write_errors_crash_instance=TRUE
+*._enable_row_shipping=FALSE
+*._first_spare_parameter=50
+*._job_queue_interval=1
+*._kghdsidx_count=1
+*._trace_files_public=FALSE
+*.aq_tm_processes=2
+*.archive_lag_target=900
+*.audit_file_dest='/u003/app/orahris/admin/STAGEHCM/adump'
+*.audit_sys_operations=TRUE
+*.audit_trail='DB_EXTENDED'# OS
+*.backup_tape_io_slaves=TRUE
+*.cluster_database=FALSE
+*.cluster_database_instances=3
+*.compatible='11.2.0.0.0'
+*.control_file_record_keep_time=60
+*.control_files='+DATA/STAGEHCM/CONTROLFILE/control01.ctl','+DATA/STAGEHCM/CONTROLFILE/control02.ctl'
+*.control_management_pack_access='DIAGNOSTIC+TUNING'
+*.cursor_sharing='FORCE'
+*.db_block_checking='LOW'
+*.db_block_size=8192
+*.db_create_file_dest='+DATA'
+*.db_create_online_log_dest_1='+DATA'
+*.db_create_online_log_dest_2='+RECO'
+*.db_domain='DS.ACC.CO.NZ'
+*.db_file_multiblock_read_count=8
+*.db_files=2048
+*.db_flashback_retention_target=1440
+*.db_name='STAGEHCM'
+*.db_recovery_file_dest_size=1000G
+*.db_recovery_file_dest='+RECO'
+*.db_securefile='PERMITTED'
+*.db_ultra_safe='DATA_ONLY'
+*.db_unique_name='STAGEHCM'
+*.db_writer_processes=2
+*.ddl_lock_timeout=0
+*.deferred_segment_creation=TRUE
+*.diagnostic_dest='/u003/app/orahris'
+*.dispatchers='(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP))(SERVICE=STAGEHCMXDB))'
+*.dml_locks=8000
+*.fast_start_mttr_target=600
+*.filesystemio_options='setall'
+*.global_names=FALSE
+STAGEHCM1.instance_number=1
+STAGEHCM2.instance_number=2
+STAGEHCM3.instance_number=3
+*.job_queue_processes=10
+*.local_listener='(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=kdclor5001-vip)(PORT=1521))))'
+STAGEHCM2.local_listener='(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=kdclor5002-vip)(PORT=1521))))'
+STAGEHCM3.local_listener='(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=kdclor5003-vip)(PORT=1521))))'
+*.log_archive_dest_1='location=USE_DB_RECOVERY_FILE_DEST mandatory'
+*.log_archive_dest_state_1='enable'
+*.log_archive_format='%d_%t_%s_%r.arc'
+*.log_archive_max_processes=2
+*.log_archive_trace=2048
+*.log_buffer=10485760
+*.log_checkpoint_interval=0
+*.log_checkpoint_timeout=900
+*.log_checkpoints_to_alert=TRUE
+*.max_dump_file_size='1g'
+*.nls_comp='BINARY'
+*.nls_date_format='DD-MON-RRRR'
+*.nls_language='AMERICAN'
+*.nls_length_semantics='CHAR'
+*.nls_sort='BINARY'
+*.nls_territory='New Zealand'
+*.O7_DICTIONARY_ACCESSIBILITY=FALSE
+*.open_cursors=1200# 7000
+*.open_links=4
+*.optimizer_features_enable='11.2.0.3'
+*.optimizer_index_cost_adj=50
+*.optimizer_mode='ALL_ROWS'
+*.optimizer_use_invisible_indexes=FALSE
+*.os_authent_prefix='OPS$'
+*.parallel_adaptive_multi_user=TRUE
+*.parallel_execution_message_size=8192
+*.parallel_max_servers=8
+*.parallel_min_servers=0
+*.pga_aggregate_target=5368709120
+*.processes=400# 1500
+*.remote_listener='devcluster-scan:1521'
+*.remote_login_passwordfile='EXCLUSIVE'
+*.remote_os_roles=FALSE
+*.result_cache_max_result=10
+*.result_cache_max_size=100M
+*.result_cache_mode='AUTO'
+*.result_cache_remote_expiration=0
+*.resumable_timeout=0
+*.sec_case_sensitive_logon=TRUE
+*.sec_max_failed_login_attempts=10
+*.sec_return_server_release_banner=FALSE
+*.service_names='STAGEHCM'
+*.session_cached_cursors=200
+*.session_max_open_files=20
+*.sessions=800
+*.sga_max_size=1G
+*.sga_target=1G
+*.shared_servers=0
+*.skip_unusable_indexes=TRUE
+*.star_transformation_enabled='FALSE'
+*.statistics_level='ALL'
+*.streams_pool_size=0
+*.tape_asynch_io=TRUE
+*.timed_statistics=TRUE
+*.transactions=1600
+*.undo_management='AUTO'
+STAGEHCM2.undo_tablespace='UNDOTBS2'
+STAGEHCM3.undo_tablespace='UNDOTBS3'
+STAGEHCM1.undo_tablespace='UNDO_1'
+STAGEHCM.undo_tablespace='UNDOTBS1'
+*.workarea_size_policy='AUTO'
+
+

@@ -1,0 +1,6 @@
+CTST1  :DEVL :/oracle/bin/CTST1.env:FIN::::::::CTST1 - Financials
+CTST2  :DEVL :/oracle/bin/CTST2.env:FIN::::::::CTST2 - Financials - delete on 2012/03/08
+CTST16 :DEVL :/oracle/bin/CTST16.env:FIN::::::::CTST16 - Financials - delete on 2012/02/xx
+CTST31 :DEVL :/oracle/bin/CTST31.env:FIN::::::::CTST31 - Financials - delete on 2012/02/xx
+CTST44 :DEVL :/oracle/bin/CTST44.env:FIN::::::::CTST44 - Financials - delete on 2012/03/08
+CTST73 :DEVL :/oracle/bin/CTST73.env:FIN::::::::CTST73 - Financials - delete on 2012/03/08
