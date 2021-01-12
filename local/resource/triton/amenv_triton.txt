@@ -1,0 +1,1 @@
+include = ${AM_LOCAL_TOP}/resource/triton/amenv_vcf_triton.txt

@@ -1,0 +1,72 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/TCTRLM/init_TCTRLM.ora,v 1.1 2014/03/24 00:10:41 hongh Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : init.ora
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000 H Hong        2009/05/01 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# ##################
+# common
+# ##################
+ifile=/home/oracle/local/resource/init_BMC_small.ora
+
+# ##################
+# site specific
+# ##################
+
+# ##################
+# genernal
+# ##################
+db_unique_name			= TCTRLM	
+db_name 			= TCTRLM	
+service_names 			= TCTRLM
+instance_name 			= TCTRLM	
+instance_type 			= RDBMS		
+local_listener			= "TCTRLM"	
+
+# ##################
+# file creation
+# ##################
+control_files			= ("/u106/oradata/TCTRLM/control01.ctl", "/u206/oradata/TCTRLM/control02.ctl")
+
+# ##################
+# security
+# ##################
+audit_file_dest 		= "/u006/app/oracle/admin/TCTRLM/adump"
+
+# ##################
+# diagnostic
+# ##################
+diagnostic_dest			= "/u006/app/oracle"
+
+# ##################
+# flashback
+# ##################
+db_flashback_retention_target	= 10080
+db_recovery_file_dest_size	= 10G		
+db_recovery_file_dest		= "/u206/orafra"
+
+# ##################
+# data guard section
+# ##################
+log_archive_config		= "DG_CONFIG=(TCTRLM, TCTRLM_STDBY)"
+log_archive_format 		= %d_%t_%s_%r.arc
+log_archive_dest_1 		= "location=USE_DB_RECOVERY_FILE_DEST mandatory valid_for=(all_logfiles,all_roles) db_unique_name=TCTRLM"
+log_archive_dest_state_1 	= "enable"	
+#log_archive_dest_2 		= "service=TCTRLM_STDBY optional valid_for=(online_logfiles,primary_role) db_unqiue_name=TCTRLM_STDBY"
+#log_archive_dest_state_2 	= "enable"	
+#db_file_name_convert		= ('/u101/oradata/TCTRLM_STDBY', '/u10/oradata/TCTRLM')
+#log_file_name_convert		= ('/u101/oradata/TCTRLM_STDBY', '/u101/oradata/TCTRLM', '/u201/oradata/TCTRLM_STDBY', '/u201/oradata/TCTRLM')
+#fal_server			= TCTRLM		
+#fal_client			= TCTRLM_STDBY	
+#standby_archive_dest		= "/u201/oraarch/TCTRLM"	
+
+# ##################
+# Shared Server
+# ##################
+dispatchers			= "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP))(SERVICE=TCTRLMXDB))"	

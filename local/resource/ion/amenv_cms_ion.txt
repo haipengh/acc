@@ -1,0 +1,22 @@
+OPTREPO   :ENV19     ::::::      :      :OPT::::::N:N:Optim Repository - moved to rac
+GEOS1     :ENV19     ::::::GEFM1 :      :EOS::::::N:N:Optim Gold - EOS - moved to rac
+GEFM1     :ENV19     ::::::      :GEOS1 :EFM::::::N:N:Optim Gold - eForms - moved to rac
+SCMS1     :ENV06     ::::::KCMSE :      :EOS::::::N:N:Env 06 (CIA) - EOS - moved to rac
+KCMSE     :ENV06     ::::::      :SCMS1 :EFM::::::N:N:Env 06 (CIA) - eForms - moved to mars
+SCMS10    :ENV10     ::::::SEFM10:      :EOS::::::N:N:Env 10 - EOS - moved to RAC
+SEFM10    :ENV10     ::::::      :SCMS10:EFM::::::N:N:Env 10 - eForms - decommissioned
+SCMS17    :ENV17     ::::::      :      :EOS::::::N:N:Env 17 - EOS - moved to rac
+FCMS2     :ENV18     ::::::FEFM2 :      :EOS::::::N:N:Env 18 (FIT1B) - EOS - moved to rac
+FEFM2     :ENV18     ::::::      :FCMS2 :EFM::::::N:N:Env 18 (FIT1B) - eForms - moved to mars
+SCMS2     :ENV49     ::::::      :      :EOS::::::N:N:Env 49 (SIT1B) - EOS - moved to rac
+SCMS24    :ENV24     ::::::      :      :EOS::::::N:N:Env 24 - EOS - moved to rac
+SCMS57    :ENV57     ::::::      :      :EOS::::::N:N:Env 57 - EOS - moved to rac
+SCMS71    :ENV71     ::::::      :      :EOS::::::N:N:Env 71 - EOS - moved to rac
+SCMS72    :ENV72     ::::::      :      :EOS::::::N:N:Env 72 - EOS - moved to rac
+SCMS73    :ENV73     ::::::SEFM73:      :EOS::::::N:N:Env 73 - EOS - moved to rac
+SEFM73    :ENV73     ::::::      :SCMS73:EFM::::::N:N:Env 73 - eForms - moved to rac
+SCMS74    :ENV74     ::::::      :      :EOS::::::N:N:Env 74 - EOS - moved to rac
+SCMS75    :ENV75     ::::::      :      :EOS::::::N:N:Env 75 - EOS - moved to rac
+SCMS77    :ENV77     ::::::      :      :EOS::::::N:N:Env 77 - EOS - moved to rac
+SCMS80    :ENV80     ::::::      :      :EOS::::::N:N:Env 80 - EOS - moved to rac
+OMA11G    :OMA11G    :OMA:::::      :      :OMA:${LOCAL_TOP}/resource/ion/profile_ion_OMA_11g.env               :       ::::N:N:OMA 11g

@@ -1,0 +1,3 @@
+VCFCN001  :NFR  ::VCF::vcfappl::${HOME}/vcf/${MODULE_TAG}:vcfappl:N:JOB_PRI_ARCHLOG_DELETE:NFR - VCF Drafts
+VCFCN101  :NFR  ::VCF::vcfappl::${HOME}/vcf/${MODULE_TAG}:vcfappl:N:JOB_PRI_ARCHLOG_DELETE:NFR - VCF 1:1
+VCFCN201  :NFR  ::VCF::vcfappl::${HOME}/vcf/${MODULE_TAG}:vcfappl:N:JOB_PRI_ARCHLOG_DELETE:NFR - VCF 2:1

@@ -1,0 +1,38 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/CMSE10/init_CMSE10.ora,v 1.4 2012/03/14 01:53:53 hongh Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : init.ora
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000 H Hong        2005/06/13 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# ##################
+# common
+# ##################
+ifile=/oracle/local/resource/init_VCF_small.ora
+
+# ##################
+# genernal
+# ##################
+db_domain		= ''
+db_name			= CMSE10
+instance_name		= CMSE10
+
+control_files		= (/u001/oradata/CMSE10/control01.ctl,/vcf110/oradata/CMSE10/control02.ctl,/vcf210/oradata/CMSE10/control03.ctl)
+
+core_dump_dest		= ?/admin/CMSE10/cdump
+background_dump_dest	= ?/admin/CMSE10/bdump
+user_dump_dest		= ?/admin/CMSE10/udump
+audit_file_dest		= ?/admin/CMSE10/audit
+utl_file_dir		= /tmp, /data/CMSE10
+
+# ##################
+# data guard section
+# ##################
+log_archive_format	= CMST1A_%t_%s.arc
+log_archive_dest_1	= 'LOCATION=/vcf210/oraarch/CMSE10 mandatory'
+log_archive_dest_state_1= enable

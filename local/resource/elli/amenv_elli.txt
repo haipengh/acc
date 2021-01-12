@@ -1,0 +1,4 @@
+include = ${AM_LOCAL_TOP}/resource/elli/amenv_cms_elli.txt
+include = ${AM_LOCAL_TOP}/resource/elli/amenv_vcf_elli.txt
+include = ${AM_LOCAL_TOP}/resource/elli/amenv_fin_elli.txt
+include = ${AM_LOCAL_TOP}/resource/elli/amenv_esb_elli.txt

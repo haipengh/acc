@@ -1,0 +1,54 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/EMGAP1/init_EMGAP1_mars.ora,v 1.2 2012/07/03 23:17:11 hongh Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : init.ora
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000               2005/06/13 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# ##################
+# common
+# ##################
+ifile=/oracle/local/resource/init_EMG_large.ora
+
+# ##################
+# site specific
+# ##################
+*.aq_tm_processes		= 0
+*.job_queue_processes           = 0
+
+# ##################
+# genernal
+# ##################
+*.db_domain			= ""
+*.db_name			= EMGAP1
+*.db_unique_name		= EMGAP1_MARS
+*.service_names			= EMGAP1
+*.instance_name			= EMGAP1
+*.global_names			= FALSE
+#*.local_listener		= EMGAP1
+
+*.control_files			= (/emg001/oradata/EMGAP1/control01.ctl, /emg101/oradata/EMGAP1/control02.ctl, /emg201/oradata/EMGAP1/control03.ctl)
+
+*.core_dump_dest		= "/emg001/oracle/admin/EMGAP1/cdump"
+*.background_dump_dest		= "/emg001/oracle/admin/EMGAP1/bdump"
+*.user_dump_dest		= "/emg001/oracle/admin/EMGAP1/udump"
+*.audit_file_dest		= "/emg001/oracle/admin/EMGAP1/audit"
+
+# ##################
+# data guard section
+# ##################
+*.log_archive_format		= %t_%s_%r.arc		# keep with production format
+*.log_archive_dest_1		= "LOCATION=/emg201/oraarch/EMGAP1 VALID_FOR=(ALL_LOGFILES,ALL_ROLES)"
+*.log_archive_dest_state_1	= enable
+#*.fal_client			= EMGAP1_MARS
+#*.fal_server			= EMGAP1_DUMMY
+#*.log_archive_config		= "DG_CONFIG=(EMGAP1_DUMMY,EMGAP1_MARS)"
+*.standby_archive_dest		= "/emg201/oraarch/EMGAP1"
+*.standby_file_management	= AUTO
+db_file_name_convert		= ('/emg001/oradata/EMGAP1', '/emg001/oradata/EMGAP1', '/emg101/oradata/EMGAP1', '/emg101/oradata/EMGAP1', '/emg201/oradata/EMGAP1', '/emg201/oradata/EMGAP1')
+log_file_name_convert		= ('/emg001/oradata/EMGAP1', '/emg001/oradata/EMGAP1', '/emg101/oradata/EMGAP1', '/emg101/oradata/EMGAP1', '/emg201/oradata/EMGAP1', '/emg201/oradata/EMGAP1')

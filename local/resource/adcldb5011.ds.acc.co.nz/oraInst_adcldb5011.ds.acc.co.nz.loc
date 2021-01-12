@@ -1,0 +1,15 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/adcldb5011.ds.acc.co.nz/oraInst_adcldb5011.ds.acc.co.nz.loc,v 1.1 2010/02/02 21:41:34 hongh Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : oraInst.ora
+# Purpose : this is the oraInst.ora for database
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000 H Hong        2005/06/28 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+inst_group=dba
+inventory_loc=/u001/app/oraInventory

@@ -1,0 +1,177 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/elli/tnsnames_elli.ora,v 1.15 2012/02/20 21:28:05 hongh Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : listener.ora
+# Purpose : this is the listener.ora for database
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000 H Hong        2005/06/14 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# tnsnames.ora file for localhost
+#
+#    SID         Host       Port    Valid
+#    ----------  ---------- ------- -----
+#
+#    UEOS1       elli       10118   Y
+#    UEFM1       elli       10119   Y
+#    CMST1A      elli       10301   Y
+#    F1BCMS1     elli       10302   Y
+#    CMSE16      elli       10308   Y
+#    KEOS1       elli       10309   Y
+#    TRDCMS1     elli       10310   Y
+#    UATCMS1     elli       10311   Y
+#    TESB2       elli       10316   Y
+#    CMSD1A      elli       10317   Y
+#    CITCMS1     elli       10318   Y
+#    MIGCMS1     elli       10319   Y
+#    VF001E15    elli       40303   Y
+#    VF101E15    elli       40304   Y
+#    VF201E15    elli       40305   Y
+#    SCMS16      elli       40306   Y
+#    SEFM16      elli       40307   N
+#    VF001E35    elli       40312   Y
+#    VF101E35    elli       40313   Y
+#    VF201E35    elli       40314   Y
+#    SCMS34      elli       40315   Y
+#    TESB3       elli       40316   Y
+#
+
+# #################
+# instance on elli
+# #################
+UEOS1, UEOS1.DS.ACC.CO.NZ = 
+	(DESCRIPTION =
+		(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = elli.ds.acc.co.nz)(PORT = 10118)))
+		(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = UEOS1))
+	)
+
+UEFM1, UEFM1.DS.ACC.CO.NZ = 
+	(DESCRIPTION =
+		(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = elli.ds.acc.co.nz)(PORT = 10119)))
+		(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = UEFM1))
+	)
+
+CMST1A, CMST1A.DS.ACC.CO.NZ = 
+	(DESCRIPTION =
+		(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = elli.ds.acc.co.nz)(PORT = 10301)))
+		(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = CMST1A))
+	)
+
+F1BCMS1, F1BCMS1.DS.ACC.CO.NZ = 
+	(DESCRIPTION =
+		(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = elli.ds.acc.co.nz)(PORT = 10302)))
+		(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = F1BCMS1))
+	)
+
+CMSE16, CMSE16.DS.ACC.CO.NZ = 
+	(DESCRIPTION =
+		(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = elli.ds.acc.co.nz)(PORT = 10308)))
+		(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = CMSE16))
+	)
+
+KEOS1, KEOS1.DS.ACC.CO.NZ = 
+	(DESCRIPTION =
+		(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = elli.ds.acc.co.nz)(PORT = 10309)))
+		(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = KEOS1))
+	)
+
+TRDCMS1, TRDCMS1.DS.ACC.CO.NZ = 
+	(DESCRIPTION =
+		(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = elli.ds.acc.co.nz)(PORT = 10310)))
+		(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = TRDCMS1))
+	)
+
+UATCMS1, UATCMS1.DS.ACC.CO.NZ = 
+	(DESCRIPTION =
+		(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = elli.ds.acc.co.nz)(PORT = 10311)))
+		(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = UATCMS1))
+	)
+
+TESB2, TESB2.DS.ACC.CO.NZ = 
+	(DESCRIPTION =
+		(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = elli.ds.acc.co.nz)(PORT = 10316)))
+		(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = TESB2))
+	)
+
+CMSD1A, CMSD1A.DS.ACC.CO.NZ = 
+	(DESCRIPTION =
+		(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = elli.ds.acc.co.nz)(PORT = 10317)))
+		(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = CMSD1A))
+	)
+
+CITCMS1, CITCMS1.DS.ACC.CO.NZ = 
+	(DESCRIPTION =
+		(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = elli.ds.acc.co.nz)(PORT = 10318)))
+		(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = CITCMS1))
+	)
+
+MIGCMS1, MIGCMS1.DS.ACC.CO.NZ = 
+	(DESCRIPTION =
+		(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = elli.ds.acc.co.nz)(PORT = 10319)))
+		(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = MIGCMS1))
+	)
+
+VF001E15, VF001E15.DS.ACC.CO.NZ = 
+	(DESCRIPTION =
+		(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = elli.ds.acc.co.nz)(PORT = 40303)))
+		(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = VF001E15))
+	)
+
+VF101E15, VF101E15.DS.ACC.CO.NZ = 
+	(DESCRIPTION =
+		(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = elli.ds.acc.co.nz)(PORT = 40304)))
+		(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = VF101E15))
+	)
+
+VF201E15, VF201E15.DS.ACC.CO.NZ = 
+	(DESCRIPTION =
+		(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = elli.ds.acc.co.nz)(PORT = 40305)))
+		(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = VF201E15))
+	)
+
+SCMS16, SCMS16.DS.ACC.CO.NZ = 
+	(DESCRIPTION =
+		(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = elli.ds.acc.co.nz)(PORT = 40306)))
+		(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = SCMS16))
+	)
+
+#SEFM16, SEFM16.DS.ACC.CO.NZ = 
+#	(DESCRIPTION =
+#		(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = elli.ds.acc.co.nz)(PORT = 40307)))
+#		(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = SEFM16))
+#	)
+
+VF001E35, VF001E35.DS.ACC.CO.NZ = 
+	(DESCRIPTION =
+		(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = elli.ds.acc.co.nz)(PORT = 40312)))
+		(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = VF001E35))
+	)
+
+VF101E35, VF101E35.DS.ACC.CO.NZ = 
+	(DESCRIPTION =
+		(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = elli.ds.acc.co.nz)(PORT = 40313)))
+		(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = VF101E35))
+	)
+
+VF201E35, VF201E35.DS.ACC.CO.NZ = 
+	(DESCRIPTION =
+		(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = elli.ds.acc.co.nz)(PORT = 40314)))
+		(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = VF201E35))
+	)
+
+SCMS34, SCMS34.DS.ACC.CO.NZ = 
+	(DESCRIPTION =
+		(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = elli.ds.acc.co.nz)(PORT = 40315)))
+		(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = SCMS34))
+	)
+
+TESB3, TESB3.DS.ACC.CO.NZ = 
+	(DESCRIPTION =
+		(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = elli.ds.acc.co.nz)(PORT = 40316)))
+		(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = TESB3))
+	)
+

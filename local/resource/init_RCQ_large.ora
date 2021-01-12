@@ -1,0 +1,136 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/init_RCQ_large.ora,v 1.1 2009/10/06 22:00:33 hongh Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : init.ora
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000 H Hong        2005/06/13 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# ##################
+# genernal
+# ##################
+db_domain 			= ""
+global_names 			= FALSE
+
+undo_management 		= AUTO
+undo_tablespace 		= UNDOTBS1
+undo_retention 			= 2400
+#undo_suppress_errors 		= TRUE
+
+audit_trail             	= TRUE
+audit_sys_operations 		= TRUE
+max_dump_file_size 		= 10240		#unlimited
+##background_core_dump		= partial
+
+optimizer_mode 			= CHOOSE	#ALL_ROWS
+optimizer_features_enable      	= 10.2.0.4
+##optimizer_dynamic_sampling	= 2
+##optimizer_index_caching	= 0
+##optimizer_index_cost_adj	= 100
+##optimizer_secure_view_merging	= TRUE
+compatible 			= 10.2.0	#10.2.0.3.0
+os_authent_prefix 		= OPS$
+O7_DICTIONARY_ACCESSIBILITY 	= FALSE
+remote_login_passwordfile 	= EXCLUSIVE
+remote_os_authent 		= FALSE
+remote_os_roles			= FALSE
+#query_rewrite_enabled 		= TRUE
+##query_rewrite_integrity	= enforced
+parallel_adaptive_multi_user 	= TRUE
+#parallel_automatic_tuning 	= TRUE
+#hash_join_enabled 		= TRUE
+star_transformation_enabled 	= FALSE
+#disk_asynch_io 		= TRUE		# default TRUE
+_trace_files_public 		= TRUE
+_b_tree_bitmap_plans 		= FALSE
+statistics_level		= TYPICAL	#ALL
+timed_statistics		= TRUE
+##timed_os_statistics		= 0
+log_checkpoints_to_alert	= TRUE
+db_block_checksum		= TRUE
+db_block_checking		= FALSE
+_enable_row_shipping            = FALSE
+skip_unusable_indexes           = TRUE
+_optimizer_push_pred_cost_based = FALSE
+
+db_block_size 			= 8192
+sga_max_size			= 1000M
+sga_target			= 800M
+##db_cache_size 			= 400M
+#db_2k_cache_size 		= 50M
+#java_pool_size 		= 100M
+#large_pool_size 		= 50M	
+##shared_pool_size 		= 400M
+#shared_pool_reserved_size 	= 50M
+db_file_multiblock_read_count 	= 8
+db_files 			= 500
+db_writer_processes 		= 2
+#dbwr_io_slaves 		= 2
+workarea_size_policy		= AUTO
+pga_aggregate_target 		= 400M
+#sort_area_size 		= 1048576
+#sort_area_retained_size	= 1048576
+#bitmap_merge_area_size 	= 1048576
+#create_bitmap_area_size 	= 8388608
+#hash_area_size			= 2097152
+#max_enabled_roles 		= 150
+cursor_sharing			= FORCE		#EXACT
+session_max_open_files		= 20
+session_cached_cursors  	= 200
+open_cursors            	= 600
+processes               	= 200
+sessions                	= 400
+transactions            	= 800
+#enqueue_resources       	= 32000
+dml_locks 			= 25600
+#parallel_execution_message_size = 4096
+parallel_max_servers 		= 16
+parallel_min_servers 		= 0
+##parallel_threads_per_cpu	= 2
+job_queue_processes 		= 10
+aq_tm_processes 		= 2
+control_file_record_keep_time	= 14
+#_kgl_latch_count            	= 67
+#_optim_peek_user_binds      	= FALSE
+resumable_timeout               = 0
+
+log_buffer 			= 10485760
+fast_start_mttr_target      	= 600
+log_checkpoint_interval 	= 0
+log_checkpoint_timeout		= 0
+
+# ##################
+# streams section
+# ##################
+#log_parallelism                 = 1
+#logmnr_max_persistent_sessions  = 4
+open_links                      = 4
+_first_spare_parameter		= 50
+_kghdsidx_count			= 1
+_job_queue_interval		= 1
+streams_pool_size               = 0M
+
+# ##################
+# data guard section
+# ##################
+#log_archive_start 		= TRUE
+#remote_archive_enable 		= TRUE
+log_archive_max_processes 	= 2
+log_archive_trace 		= 2048
+archive_lag_target              = 900
+##log_archive_min_succeed_dest	= 1
+
+# ##################
+# nls settings
+# ##################
+##nls_date_format 		= "DD-MON-RRRR"
+nls_language 			= AMERICAN
+nls_territory 			= AMERICA
+
+# ##################
+# events
+# ##################

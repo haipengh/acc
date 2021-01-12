@@ -1,0 +1,63 @@
+# ################
+# ENV 85
+# ################
+
+MDL8514a_inv  =
+   (DESCRIPTION=
+      (ADDRESS_LIST =
+         (ADDRESS=(PROTOCOL=tcp)(HOST = devebsodg-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA=(SERVICE_NAME=MDL8514a_inv))
+      (HS=OK)
+   )
+
+MDL8514b_inv  =
+   (DESCRIPTION=
+      (ADDRESS_LIST =
+         (ADDRESS=(PROTOCOL=tcp)(HOST = devebsodg-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA=(SERVICE_NAME=MDL8514b_inv))
+      (HS=OK)
+   )
+
+MDL8514a_ips2  =
+   (DESCRIPTION=
+      (ADDRESS_LIST =
+         (ADDRESS=(PROTOCOL=tcp)(HOST = devebsodg-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA=(SERVICE_NAME=MDL8514a_ips2))
+      (HS=OK)
+   )
+
+MDL8514b_ips2  =
+   (DESCRIPTION=
+      (ADDRESS_LIST =
+         (ADDRESS=(PROTOCOL=tcp)(HOST = devebsodg-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA=(SERVICE_NAME=MDL8514b_ips2))
+      (HS=OK)
+   )
+
+MDL8509a  =
+   (DESCRIPTION=
+      (ADDRESS_LIST =
+         (ADDRESS=(PROTOCOL=tcp)(HOST = devebsodg-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA=(SERVICE_NAME=MDL8509a))
+      (HS=OK)
+   )
+
+MDL8509b  =
+   (DESCRIPTION=
+      (ADDRESS_LIST =
+         (ADDRESS=(PROTOCOL=tcp)(HOST = devebsodg-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA=(SERVICE_NAME=MDL8509b))
+      (HS=OK)
+   )

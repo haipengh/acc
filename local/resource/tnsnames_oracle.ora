@@ -1,0 +1,25 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/tnsnames_oracle.ora,v 1.7 2020/09/15 08:09:28 cvsadmin Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : tnsnames.ora
+# Purpose : this is the tnsnames.ora for database
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000               2005/06/14 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+ifile=devrac/tnsnames_devrac.ora
+ifile=devrac/tnsnames_devrac_external.ora
+ifile=devodg/HIVE/tnsnames_HIVE.ora
+ifile=devcluster/tnsnames_devcluster.ora
+ifile=mars/tnsnames_mars.ora
+ifile=ion/tnsnames_ion.ora
+ifile=elli/tnsnames_elli.ora
+ifile=shiva/tnsnames_shiva.ora
+ifile=peta/tnsnames_peta.ora
+ifile=kdcxdb5001.ds.acc.co.nz/tnsnames_kdcxdb5001.ds.acc.co.nz.ora
+ifile=kdcldb5005.ds.acc.co.nz/tnsnames_kdcldb5005.ds.acc.co.nz.ora
+ifile=tnsnames_external.ora

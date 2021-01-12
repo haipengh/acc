@@ -1,0 +1,102 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/OPTIMP/init_OPTIMP_11g_11204.ora,v 1.1 2019/05/14 02:45:39 cvsadmin Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : init.ora
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000 H Hong        2009/05/01 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# ##################
+# common
+# ##################
+ifile=/u001/local/resource/init_devrac_OPT_11g_large_11204.ora
+
+# ##################
+# site specific
+# ##################
+#db_create_file_dest             = "+DATA"
+#db_create_online_log_dest_1     = "+DATA"
+#db_create_online_log_dest_2     = "+RECO"
+#sga_max_size                    = 4G
+#sga_target			= 4G
+#db_cache_size                   = 2G
+#shared_pool_size                = 1G
+#large_pool_size		= 128M
+#java_pool_size			= 128M
+#streams_pool_size               = 600M
+#pga_aggregate_target            = 1G
+#processes                       = 1200
+#sessions                        = 2400
+#transactions                    = 4800
+#session_cached_cursors          = 400
+#open_cursors                    = 2400
+#statistics_level		= TYPICAL
+#control_file_record_keep_time	= 30
+#db_recovery_file_dest           = "+RECO"
+#db_recovery_file_dest_size	= 1000G
+#optimizer_index_cost_adj	= 20
+#_trace_files_public             = TRUE
+#db_block_checksum              = TRUE
+#archive_lag_target              = 270          # 4.5 mins
+
+# ##################
+# names
+# ##################
+db_domain 			= "DS.ACC.CO.NZ"		
+db_name 			= OPTIMP
+db_unique_name			= OPTIMP
+#service_names 			= OPTIMP
+
+# ##################
+# RAC/instance specific
+# ##################
+#OPTIMP1.undo_tablespace 	= UNDOTBS1	
+#OPTIMP2.undo_tablespace 	= UNDOTBS2
+#OPTIMP3.undo_tablespace 	= UNDOTBS3
+remote_listener			= "devrac-scan:1521"	
+
+# ##################
+# undo
+# ##################
+
+# ##################
+# file creation
+# ##################
+control_files			= ("+DATA/OPTIMP/CONTROLFILE/control01.ctl", "+DATA/OPTIMP/CONTROLFILE/control02.ctl")
+
+# ##################
+# security
+# ##################
+#audit_file_dest 		= /u002/app/oracle/admin/OPTIMP/adump
+
+# ##################
+# diagnostic
+# ##################
+diagnostic_dest			= /u002/app/oracle
+
+# ##################
+# data guard section
+# ##################
+log_archive_dest_1 		= "location=USE_DB_RECOVERY_FILE_DEST mandatory"
+log_archive_dest_state_1 	= "enable"	
+#log_archive_dest_2 		= "service=OPTIMP_STDBY optional"
+#log_archive_dest_state_2 	= "enable"	
+#standby_file_management 	= AUTO
+#db_file_name_convert		= ('...', '...')
+#log_file_name_convert		= ('...', '...')
+#fal_server			= OPTIMP_STANDBY
+#fal_client			= OPTIMP
+#standby_archive_dest		= "+RECO"	
+
+# ##################
+# Shared Server
+# ##################
+dispatchers			= "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP))(SERVICE=OPTIMPXDB))"
+
+# ##################
+# events
+# ##################

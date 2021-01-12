@@ -1,0 +1,49 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/EMG61RP1/init_EMG61RP1_preclone.ora,v 1.2 2009/10/05 02:48:35 hongh Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : init.ora
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000               2005/06/13 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# ##################
+# common
+# ##################
+ifile=/oracle/local/resource/init_EMG_small.ora
+
+# ##################
+# genernal
+# ##################
+*.db_domain			= ""
+*.db_name			= EMG61AP1
+*.db_unique_name		= EMG61AP1
+*.service_names			= EMG61AP1
+*.instance_name			= EMG61AP1
+*.global_names			= FALSE
+#*.local_listener		= EMG61AP1
+
+*.control_files			= (/emg008/oradata/EMG61RP1/control01.ctl, /emg108/oradata/EMG61RP1/control02.ctl, /emg208/oradata/EMG61RP1/control03.ctl)
+
+*.core_dump_dest		= "/emg008/oracle/admin/EMG61RP1/cdump"
+*.background_dump_dest		= "/emg008/oracle/admin/EMG61RP1/bdump"
+*.user_dump_dest		= "/emg008/oracle/admin/EMG61RP1/udump"
+*.audit_file_dest		= "/emg008/oracle/admin/EMG61RP1/audit"
+
+# ##################
+# data guard section
+# ##################
+*.log_archive_format		= EMG61AP1_%t_%s_%r.arc
+*.log_archive_dest_1		= "LOCATION=/emg208/oraarch/EMG61RP1 VALID_FOR=(ALL_LOGFILES,ALL_ROLES)"
+*.log_archive_dest_state_1	= enable
+#*.fal_client			= EMG61RP1
+#*.fal_server			= EMG61AP1_PRIMARY
+#*.log_archive_config		= "DG_CONFIG=(EMG61AP1_PRIMARY,EMG61RP1)"
+*.standby_archive_dest		= "/emg208/oraarch/STBY_EMG61RP1"
+*.standby_file_management	= AUTO
+*.db_file_name_convert		= ('/emg006/oradata/EMG61AP1', '/emg008/oradata/EMG61RP1', '/emg106/oradata/EMG61AP1', '/emg108/oradata/EMG61RP1', '/emg206/oradata/EMG61AP1', '/emg208/oradata/EMG61RP1')
+*.log_file_name_convert		= ('/emg006/oradata/EMG61AP1', '/emg008/oradata/EMG61RP1', '/emg106/oradata/EMG61AP1', '/emg108/oradata/EMG61RP1', '/emg206/oradata/EMG61AP1', '/emg208/oradata/EMG61RP1')
+

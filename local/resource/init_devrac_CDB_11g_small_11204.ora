@@ -1,0 +1,258 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/init_devrac_CDB_11g_small_11204.ora,v 1.1 2016/10/16 20:25:48 cvsadmin Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : init.ora
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000 H Hong        2009/05/01 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# ##################
+# names
+# ##################
+db_domain 			= ""		
+global_names 			= FALSE
+
+# ##################
+# RAC
+# ##################
+cluster_database		= TRUE		
+#cluster_database_instances	= 16
+
+# ##################
+# file creation
+# ##################
+db_create_file_dest		= "+DATA"
+db_create_online_log_dest_1	= "+DATA"	
+db_create_online_log_dest_2	= "+RECO"
+
+# ##################
+# undo
+# ##################
+undo_management 		= AUTO
+#undo_retention 		= 0		
+#undo_suppress_errors 		= TRUE		
+
+# ##################
+# security
+# ##################
+audit_trail 			= DB_EXTENDED	# OS
+audit_sys_operations 		= TRUE
+sec_case_sensitive_logon	= TRUE
+sec_max_failed_login_attempts	= 10
+#sec_protocol_error_further_action	= CONTINUE	
+#sec_protocol_error_trace_action	= TRACE		
+sec_return_server_release_banner 	= FALSE		
+
+# ##################
+# diagnostic
+# ##################
+max_dump_file_size 		= 10240		
+control_management_pack_access	= DIAGNOSTIC+TUNING	
+#trace_enabled			= TRUE		
+#tracefile_identifier		= ""
+#utl_file_dir 			= /tmp
+
+# ##################
+# optimizer
+# ##################
+optimizer_mode 			= ALL_ROWS
+optimizer_features_enable	= 11.2.0.4
+#optimizer_capture_sql_plan_baselines	= FALSE	
+#optimizer_use_sql_plan_baselines	= TRUE	
+#optimizer_use_pending_statistics	= FALSE
+optimizer_use_invisible_indexes	= FALSE
+#_optimizer_push_pred_cost_based	= FALSE		
+#_b_tree_bitmap_plans 		= FALSE		
+#_optimizer_order_by_elimination_enabled = false	
+#_optim_peek_user_binds		= FALSE	
+
+# ##################
+# miscellaneous
+# ##################
+compatible 			= 11.2.0.0.0
+os_authent_prefix 		= OPS$
+O7_DICTIONARY_ACCESSIBILITY 	= FALSE		
+remote_login_passwordfile 	= EXCLUSIVE	
+#remote_os_authent 		= FALSE
+remote_os_roles			= FALSE
+#query_rewrite_enabled 		= TRUE	
+#query_rewrite_integrity	= enforced	
+parallel_adaptive_multi_user 	= TRUE		
+#hash_join_enabled 		= TRUE		
+star_transformation_enabled 	= FALSE
+filesystemio_options		= setall	
+#disk_asynch_io 		= TRUE
+_enable_row_shipping		= FALSE		
+_trace_files_public 		= FALSE		
+statistics_level		= ALL		
+timed_statistics		= TRUE		
+log_checkpoints_to_alert	= TRUE
+#enable_ddl_logging		= FALSE
+#sql92_security			= TRUE
+db_ultra_safe			= DATA_ONLY
+#db_block_checksum		= TRUE		
+#db_block_checking		= FALSE		
+#db_lost_write_protect		= TYPICAL
+skip_unusable_indexes		= TRUE		
+#recyclebin			= ON	
+deferred_segment_creation  	= TRUE	
+_datafile_write_errors_crash_instance = TRUE
+
+# ##################
+# sga/pga
+# ##################
+db_block_size 			= 16384		#8192	
+#memory_max_target		= 1G
+#memory_target			= 1G	
+sga_max_size			= 1600M
+sga_target			= 1600M
+#db_cache_size 			= 200M
+#java_pool_size 			= 100M
+#large_pool_size 		= 50M		
+shared_pool_size 		= 600M
+#shared_pool_reserved_size 	= 50M
+#db_nk_cache_size 		= 50M		
+#db_keep_cache_size		= 		
+#db_recycle_cache_size		=		
+#object_cache_max_size_percent	= 10		
+#object_cache_optimal_size	= 102400	
+db_file_multiblock_read_count 	= 8	
+db_files 			= 2048
+db_writer_processes 		= 2		
+#dbwr_io_slaves 		= 2
+workarea_size_policy		= AUTO		
+pga_aggregate_target 		= 100M		
+#sort_area_size 		= 1048576
+#sort_area_retained_size	= 1048576
+#bitmap_merge_area_size 	= 1048576
+#create_bitmap_area_size 	= 8388608
+#hash_area_size			= 2097152
+#max_enabled_roles 		= 60		
+cursor_sharing			= FORCE
+session_max_open_files		= 20		
+session_cached_cursors		= 200		
+open_cursors 			= 300
+processes 			= 150
+sessions			= 300
+#enqueue_resources 		= 32000		
+transactions			= 800		
+dml_locks 			= 8000		
+ddl_lock_timeout		= 0
+job_queue_processes 		= 10		
+aq_tm_processes 		= 2
+#job_queue_interval 		= 120		
+control_file_record_keep_time	= 14
+resumable_timeout		= 0		
+#shared_servers			= 10
+
+# ##################
+# redo log
+# ##################
+log_buffer 			= 10485760
+fast_start_mttr_target		= 600
+log_checkpoint_interval 	= 0		
+log_checkpoint_timeout		= 0		
+
+# ##################
+# flashback
+# ##################
+db_flashback_retention_target	= 1440
+db_recovery_file_dest_size	= 1000G
+db_recovery_file_dest		= "+RECO"
+
+# ##################
+# parallelism
+# ##################
+#parallel_adaptive_multi_user 	= TRUE
+#parallel_automatic_tuning 	= TRUE		
+parallel_execution_message_size = 8192
+parallel_max_servers 		= 16
+parallel_min_servers 		= 2
+
+# ##################
+# result cache
+# ##################
+#result_cache_max_result		= 10
+#result_cache_max_size		= 100M
+#result_cache_mode		= AUTO
+#result_cache_remote_expiration	= 0
+
+# ##################
+# securefile
+# ##################
+db_securefile			= PERMITTED
+
+# ##################
+# streams section
+# ##################
+#log_parallelism                 = 1		
+#logmnr_max_persistent_sessions  = 4		
+open_links                      = 4		
+_first_spare_parameter		= 50
+_kghdsidx_count			= 1
+_job_queue_interval		= 1		
+streams_pool_size		= 300M		
+
+# ##################
+# data guard section
+# ##################
+#log_archive_start 		= TRUE		
+#log_archive_config		= "DG_CONFIG=(<db_unique_name_of_primary>, <db_unique_name_of_standby>)"
+#remote_archive_enable 		= TRUE
+log_archive_max_processes 	= 2
+log_archive_trace 		= 2048
+#log_archive_min_succeed_dest	= 1		
+archive_lag_target		= 1800		
+log_archive_format 		= %d_%t_%s_%r.arc	
+
+# ##################
+# NLS setttings
+# ##################
+nls_length_semantics		= BYTE
+nls_date_format 		= "DD-MON-RRRR"
+nls_language 			= ENGLISH	
+nls_territory 			= "NEW ZEALAND"
+
+# ##################
+# XA Specific
+# ##################
+distributed_lock_timeout	= 300
+
+# ##################
+# Shared Server
+# ##################
+#max_dispatchers		= 1
+shared_servers                  = 0
+
+# ##################
+# Tape IO
+# ##################
+tape_asynch_io			= TRUE
+backup_tape_io_slaves         	= TRUE
+
+# ##################
+# CDB Specific
+# ##################
+_partition_large_extents	= FALSE
+
+# ##################
+# events
+# ##################
+#event="24040 trace name context forever, level 10"
+
+# ##################
+# Bug 13550185
+# ##################
+_kghdsidx_count			= 1	# bug 13550185 which is fixed in 11.2.0.4 and PSU 11.2.0.3.4 (PSU Patch 14275605)
+					# only one shared pool subpool is used
+					# in highly concurrent environments this workaround may cause shared pool and library cache latch related contention issues
+					# bug 13550185 is known to sometimes cause unpublished bug 14076523, described in Note: 14076523.8
+
+# ##################
+# other fixes 
+# ##################
+_client_enable_auto_unregister	= TRUE

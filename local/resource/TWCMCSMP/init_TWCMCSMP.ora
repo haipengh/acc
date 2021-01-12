@@ -1,0 +1,156 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/TWCMCSMP/init_TWCMCSMP.ora,v 1.1 2010/02/04 22:46:36 hongh Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : init.ora
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000 H Hong        2009/05/01 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+
+db_domain 			= ""
+db_unique_name			= TWCMCSMP
+db_name 			= TWCMCSMP
+service_names 			= TWCMCSMP
+instance_name 			= TWCMCSMP
+instance_type 			= RDBMS
+global_names 			= FALSE		
+local_listener                  = TWCMCSMP
+
+# ##################
+# file creation
+# ##################
+control_files			= ('/u101/oradata/TWCMCSMP/control01.ctl', '/u201/oradata/TWCMCSMP/control02.ctl')
+
+# ##################
+# undo
+# ##################
+undo_tablespace 		= UNDOTBS1
+
+# ##################
+# security
+# ##################
+audit_trail 			= DB_EXTENDED	# DB, OS
+audit_file_dest 		= /u001/app/oracle/admin/TWCMCSMP/adump 
+audit_sys_operations 		= TRUE
+sec_case_sensitive_logon	= TRUE
+sec_max_failed_login_attempts	= 10
+
+# ##################
+# diagnostic
+# ##################
+max_dump_file_size 		= 10240		
+diagnostic_dest			= /u001/app/oracle
+control_management_pack_access	= DIAGNOSTIC+TUNING
+#utl_file_dir 			= /tmp, /u999/data/TWCMCSMP
+
+# ##################
+# optimizer
+# ##################
+#optimizer_mode 		= ALL_ROWS	
+optimizer_features_enable	= 11.1.0.7
+optimizer_capture_sql_plan_baselines	= FALSE	
+optimizer_use_sql_plan_baselines	= TRUE	
+#optimizer_use_pending_statistics	= FALSE
+optimizer_use_invisible_indexes	= FALSE
+
+compatible 			= 11.1.0.0.0
+os_authent_prefix 		= OPS$
+O7_DICTIONARY_ACCESSIBILITY 	= FALSE		
+remote_login_passwordfile 	= EXCLUSIVE	
+#remote_os_authent 		= FALSE
+remote_os_roles			= FALSE
+#query_rewrite_enabled 		= TRUE		
+parallel_adaptive_multi_user 	= TRUE		
+#parallel_automatic_tuning 	= TRUE		
+#hash_join_enabled 		= TRUE		
+star_transformation_enabled 	= FALSE
+#disk_asynch_io 		= TRUE		
+_enable_row_shipping		= FALSE		
+_trace_files_public 		= FALSE		
+_b_tree_bitmap_plans 		= FALSE
+statistics_level		= ALL		
+timed_statistics		= TRUE		
+log_checkpoints_to_alert	= TRUE
+enable_ddl_logging		= FALSE	
+skip_unusable_indexes		= TRUE		
+
+# ##################
+# sga/pga
+# ##################
+db_block_size 			= 8192		
+##memory_max_target		= 1800M
+##memory_target			= 1500M
+#sga_max_size			= 2000M		
+sga_target			= 800M	
+#db_cache_size 			= 80M
+#java_pool_size 		= 100M
+#large_pool_size 		= 50M		
+#shared_pool_size 		= 300M
+#shared_pool_reserved_size 	= 50M
+db_file_multiblock_read_count 	= 8
+db_files 			= 1024
+#db_writer_processes 		= 2		
+#dbwr_io_slaves 		= 2
+workarea_size_policy		= AUTO		
+pga_aggregate_target 		= 400M
+#sort_area_size 		= 1048576
+#sort_area_retained_size	= 1048576
+#bitmap_merge_area_size 	= 1048576
+#create_bitmap_area_size 	= 8388608
+#hash_area_size			= 2097152
+#max_enabled_roles 		= 60		
+cursor_sharing			= FORCE
+session_max_open_files		= 20		
+open_cursors 			= 600		
+session_cached_cursors		= 600		
+processes 			= 200		
+sessions			= 400		
+#enqueue_resources 		= 32000		
+transactions			= 800		
+dml_locks 			= 3200		
+ddl_lock_timeout		= 0		
+parallel_execution_message_size = 4096
+#parallel_max_servers 		= 20		
+#parallel_min_servers 		= 2		
+job_queue_processes 		= 4
+aq_tm_processes 		= 2
+#job_queue_interval 		= 120		
+control_file_record_keep_time	= 30
+resumable_timeout		= 0		
+
+#log_buffer 			= 5242880	
+fast_start_mttr_target		= 300		
+#log_checkpoint_interval 	= 0		
+#log_checkpoint_timeout		= 0		
+
+# ##################
+# data flashback
+# ##################
+db_flashback_retention_target	= 1440
+db_recovery_file_dest_size	= 20G	
+db_recovery_file_dest		= '/u201/orafra'
+
+# ##################
+# data guard section
+# ##################
+#log_archive_start 		= TRUE		
+#log_archive_config		= "DG_CONFIG=(TWCMCSMP, TWCMCSMP_STDBY)"
+#remote_archive_enable 		= TRUE
+log_archive_max_processes 	= 2
+log_archive_trace 		= 2048
+#log_archive_min_succeed_dest	= 1		
+#archive_lag_target		= 1800		
+log_archive_format 		= %d_%t_%s_%r.arc
+#log_archive_dest_1 		= "location=/u201/oraarch/TWCMCSMP mandatory valid_for=(all_logfiles,all_roles) db_unique_name=TWCMCSMP"
+#log_archive_dest_state_1 	= "enable"	
+
+###########################################
+# NLS setttings
+###########################################
+nls_date_format 		= "DD-MON-RRRR"
+nls_language 			= AMERICAN
+nls_territory 			= AMERICA

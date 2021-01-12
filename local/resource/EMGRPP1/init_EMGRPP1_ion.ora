@@ -1,0 +1,48 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/EMGRPP1/init_EMGRPP1_ion.ora,v 1.1 2009/09/24 00:21:25 hongh Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : init.ora
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000               2005/06/13 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# ##################
+# common
+# ##################
+ifile=/oracle/local/resource/init_EMG_large.ora
+
+# ##################
+# genernal
+# ##################
+*.db_domain			= ""
+*.db_name			= EMGRPP1
+*.db_unique_name		= EMGRPP1
+*.service_names			= EMGRPP1
+*.instance_name			= EMGRPP1
+*.global_names			= FALSE
+#*.local_listener		= EMGRPP1
+
+*.control_files			= (/emg003/oradata/EMGRPP1/control01.ctl, /emg103/oradata/EMGRPP1/control02.ctl, /emg203/oradata/EMGRPP1/control03.ctl)
+
+*.core_dump_dest		= "/emg003/oracle/admin/EMGRPP1/cdump"
+*.background_dump_dest		= "/emg003/oracle/admin/EMGRPP1/bdump"
+*.user_dump_dest		= "/emg003/oracle/admin/EMGRPP1/udump"
+*.audit_file_dest		= "/emg003/oracle/admin/EMGRPP1/audit"
+
+# ##################
+# data guard section
+# ##################
+*.log_archive_format		= EMGRPP1_%t_%s_%r.arc
+*.log_archive_dest_1		= "LOCATION=/emg203/oraarch/EMGRPP1 VALID_FOR=(ALL_LOGFILES,ALL_ROLES)"
+*.log_archive_dest_state_1	= enable
+*.fal_client			= EMGRPP1
+*.fal_server			= EMGAPP1_STANDBY
+*.log_archive_config		= "DG_CONFIG=(EMGAPP1_PRIMARY,EMGAPP1_STANDBY,EMGRPP1)"
+*.standby_archive_dest		= "/emg203/oraarch/STBY_EMGRPP1"
+*.standby_file_management	= AUTO
+*.db_file_name_convert		= ('/emg001/oradata/EMGAPP1', '/emg003/oradata/EMGRPP1','/emg101/oradata/EMGAPP1', '/emg103/oradata/EMGRPP1','/emg201/oradata/EMGAPP1', '/emg203/oradata/EMGRPP1')
+*.log_file_name_convert		= ('/emg001/oradata/EMGAPP1', '/emg003/oradata/EMGRPP1', '/emg101/oradata/EMGAPP1', '/emg103/oradata/EMGRPP1','/emg201/oradata/EMGAPP1', '/emg203/oradata/EMGRPP1')

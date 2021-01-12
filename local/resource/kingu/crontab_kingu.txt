@@ -1,0 +1,17 @@
+#
+# ############################
+# CVS
+# task:
+#  o) weekly backup
+# ############################
+#
+0 18 * * * local/bin/execcronjob.sh -mail=ON -desc="AM_Update_Local" cvs checkout -rAR000000 -dlocal local2 1>/dev/null
+#
+# ############################
+# Backup
+# task:
+#  o) daily archivelog
+#  o) weekly db
+# ############################
+0 20 * * 0-4 local/bin/execcronjob.sh -desc="backup_archlog" ambkparchlog.sh 1>/dev/null 2>&1
+0 20 * * 5 local/bin/execcronjob.sh -desc="backup_db" ambkpdbfull.sh 1>/dev/null 2>&1

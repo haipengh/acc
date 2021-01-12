@@ -1,0 +1,114 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/E00EOS/init_E00EOS_12cR1_12102.ora,v 1.1 2019/03/11 23:26:33 cvsadmin Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : init.ora
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000 H Hong        2005/06/13 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# ##################
+# common
+# ##################
+ifile=/u001/local/resource/init_devrac_EOS_12cR1_small_12102.ora
+
+# ##################
+# site specific
+# ##################
+db_create_file_dest             = "+DATA"		# "+PRD_TD_EOS_DATA"
+db_create_online_log_dest_1     = "+DATA"
+db_create_online_log_dest_2     = "+RECO"
+#sga_max_size                    = 4G
+sga_target			= 3G
+#db_cache_size                   = 2G
+#shared_pool_size                = 1200M
+pga_aggregate_target            = 1G
+#streams_pool_size               = 800M
+session_cached_cursors          = 400
+open_cursors			= 2400
+processes                       = 400
+sessions                        = 800
+transactions                    = 20000
+#statistics_level		= TYPICAL
+#db_ultra_safe			= DATA_AND_INDEX
+#db_block_checksum		= TRUE		
+#db_block_checking		= FULL
+#db_lost_write_protect		= TYPICAL
+control_file_record_keep_time	= 60
+#db_recovery_file_dest           = "+RECO"
+#db_recovery_file_dest_size	= 1000G
+#db_flashback_retention_target   = 10080
+#_trace_files_public             = TRUE
+archive_lag_target              = 270		# 4.5 mins
+
+# ##################
+# names
+# ##################
+db_domain 			= "DS.ACC.CO.NZ"		
+db_name 			= PEOS
+db_unique_name			= E00EOS
+service_names 			= 'PEOS_KDC','E00EOS_DGB.DS.ACC.CO.NZ'
+
+# ##################
+# RAC/instances
+# ##################
+##E00EOS1.undo_tablespace 	= UNDOTBS1
+##E00EOS2.undo_tablespace 	= UNDOTBS2
+##E00EOS3.undo_tablespace 	= UNDOTBS3
+remote_listener			= "devrac-scan:1521"
+
+# ##################
+# undo
+# ##################
+#undo_retention			= 120000
+
+# ##################
+# file creation
+# ##################
+control_files			= ("+DATA/E00EOS/CONTROLFILE/control01.ctl", "+RECO/E00EOS/CONTROLFILE/control02.ctl")
+
+# ##################
+# security
+# ##################
+audit_file_dest 		= /u002/app/oracle/admin/E00EOS/adump
+
+# ##################
+# diagnostic
+# ##################
+diagnostic_dest			= /u002/app/oracle
+
+# ##################
+# data guard section
+# ##################
+log_archive_config		= 'dg_config=(PEOS_KDC,PEOS_ADC,E00EOS)'
+dg_broker_start			= TRUE
+dg_broker_config_file1		= '+DATA/E00EOS/dg_broker/dg1_E00EOS.dat'
+dg_broker_config_file2		= '+RECO/E00EOS/dg_broker/dg2_E00EOS.dat'
+#connection_brokers		= '((TYPE=DEDICATED)(BROKERS=1))'
+#connection_brokers		= '((TYPE=EMON)(BROKERS=1))' 
+log_archive_min_succeed_dest	= 1
+log_archive_dest_1 		= "location=USE_DB_RECOVERY_FILE_DEST mandatory"
+log_archive_dest_state_1 	= "enable"
+log_archive_dest_2		= 'service=E00EOS LGWR ASYNC VALID_FOR=(ONLINE_LOGFILES,PRIMARY_ROLE) DB_UNIQUE_NAME=E00EOS'
+log_archive_dest_state_2 	= "enable"
+log_archive_dest_3		= 'service=PEOSDSC_KDC LGWR ASYNC NOREGISTER VALID_FOR=(ONLINE_LOGFILES,PRIMARY_ROLE) TEMPLATE=+PRD_TD_FRA/PEOSDSC_KDC/ARCHIVELOG/PEOS_%t_%s_%r.log DB_UNIQUE_NAME=PEOSDSC_KDC'
+log_archive_dest_state_3 	= "enable"
+log_archive_dest_5		= 'service="PEOS_ADC"','LGWR ASYNC NOAFFIRM delay=0 optional compression=disablemax_failure=0 max_connections=1 reopen=300 db_unique_name="PEOS_ADC" net_timeout=30','valid_for=(all_logfiles,primary_role)'
+log_archive_dest_state_5 	= "enable"
+standby_file_management 	= AUTO
+#db_file_name_convert		= ('+T1DATA/PEOSPRIM/', '+DR_T1DATA/PEOSSTBY/', '+RECO/PEOSPRIM', '+DR_RECO/PEOSSTBY')
+db_file_name_convert		= '+PRD_TD_EOS_DATA/PEOS_KDC', '+DATA/E00EOS', '+PRD_T0_SHA_DATA/PEOS_KDC', '+DATA/E00EOS', '+PRD_TD_EOS_DATA/PEOS_ADC', '+DATA/E00EOS', '+PRD_T0_SHA_DATA/PEOS_ADC', '+DATA/E00EOS'
+#log_file_name_convert		= ('PEOS_KDC', 'E00EOS')
+log_file_name_convert		= ('PEOS_KDC', 'E00EOS', '+PRD_T0_REDOA/PEOS_KDC', '+DATA/E00EOS', '+PRD_T0_REDOB/PEOS_KDC', '+RECO/E00EOS')
+fal_server			= 'PEOS_KDC','PEOS_ADC'
+fal_client			= E00EOS
+standby_file_management		= 'AUTO'
+#standby_archive_dest		= "+RECO"
+
+# ##################
+# Shared Server
+# ##################
+dispatchers			= "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP))(SERVICE=E00EOSXDB))"	

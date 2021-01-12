@@ -1,0 +1,64 @@
+# -----------------------------------------------------------------------------------------------
+# Script  : listener.ora
+# Purpose : this is the listener.ora for database
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000 H Hong        2005/06/14 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# listener.ora file for localhost
+#
+#    SID         Host       Port    Valid
+#    ----------  ---------- ------- -----
+#
+#    VCFCN001    triton     1522    Y
+#    VCFCN101    triton     1523    Y
+#    VCFCN201    triton     1524    Y
+#
+
+# ################
+# instance on localhost
+# ################
+LISTENER_VCFCN001 =
+ (DESCRIPTION =
+   (ADDRESS = (PROTOCOL = TCP)(HOST = triton.ds.acc.co.nz)(PORT = 1522))
+ )
+SID_LIST_LISTENER_VCFCN001 =
+ (SID_LIST =
+   (SID_DESC =
+     (GLOBAL_DBNAME = VCFCN001)
+     (ORACLE_HOME = /vcfnfr001/app/oracle/9206)
+     (SID_NAME = VCFCN001)
+   )
+ )
+
+LISTENER_VCFCN101 =
+ (DESCRIPTION =
+   (ADDRESS = (PROTOCOL = TCP)(HOST = triton.ds.acc.co.nz)(PORT = 1523))
+ )
+SID_LIST_LISTENER_VCFCN101 =
+ (SID_LIST =
+   (SID_DESC =
+     (GLOBAL_DBNAME = VCFCN101)
+     (ORACLE_HOME = /vcfnfr002/app/oracle/9206)
+     (SID_NAME = VCFCN101)
+   )
+ )
+
+LISTENER_VCFCN201 =
+ (DESCRIPTION =
+   (ADDRESS = (PROTOCOL = TCP)(HOST = triton.ds.acc.co.nz)(PORT = 1524))
+ )
+SID_LIST_LISTENER_VCFCN201 =
+ (SID_LIST =
+   (SID_DESC =
+     (GLOBAL_DBNAME = VCFCN201)
+     (ORACLE_HOME = /vcfnfr003/app/oracle/9206)
+     (SID_NAME = VCFCN201)
+   )
+ )
+

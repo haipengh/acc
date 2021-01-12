@@ -1,0 +1,104 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/E00CDB/init_E00CDB.ora,v 1.5 2019/03/11 23:25:35 cvsadmin Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : init.ora
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000 H Hong        2005/06/13 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# ##################
+# common
+# ##################
+ifile=/u001/local/resource/init_devrac_CDB_12cR1_small_12102.ora
+
+# ##################
+# site specific
+# ##################
+db_create_file_dest             = "+DATA"
+db_create_online_log_dest_1     = "+DATA"
+db_create_online_log_dest_2     = "+RECO"
+#db_block_size                   = 16384		# 8192
+#sga_max_size                    = 3G
+sga_target			= 3G
+#db_cache_size                   = 2G
+#shared_pool_size                = 1200M
+pga_aggregate_target            = 1G
+#streams_pool_size               = 800M
+#session_cached_cursors          = 400
+open_cursors			= 300
+processes                       = 400
+sessions                        = 800
+#transactions                    = 20000
+#statistics_level		= TYPICAL
+control_file_record_keep_time	= 60
+db_recovery_file_dest           = "+RECO"
+db_recovery_file_dest_size	= 1000G
+#_trace_files_public             = TRUE
+#db_block_checksum		= TRUE
+archive_lag_target              = 900		# 15 mins
+
+# ##################
+# names
+# ##################
+db_domain 			= ""		
+db_name 			= PCDB
+db_unique_name			= E00CDB
+#service_names 			= E00CDB
+
+# ##################
+# RAC/instances
+# ##################
+#E00CDB1.undo_tablespace 	= UNDOTBS1
+#E00CDB2.undo_tablespace 	= UNDOTBS2
+#E00CDB3.undo_tablespace 	= UNDOTBS3
+remote_listener			= "devrac-scan:1521"
+
+# ##################
+# undo
+# ##################
+#undo_retention			= 900
+
+# ##################
+# file creation
+# ##################
+#control_files			= ("+DATA/E00CDB/CONTROLFILE/control01.ctl", "+DATA/E00CDB/CONTROLFILE/control02.ctl")
+control_files			= ('+DATA/e00cdb/controlfile/current.5851.938045341', '+RECO/e00cdb/controlfile/current.54487.938045341')
+
+# ##################
+# security
+# ##################
+##audit_file_dest 		= /u002/app/oracle/admin/E00CDB/adump
+
+# ##################
+# diagnostic
+# ##################
+diagnostic_dest			= /u002/app/oracle
+
+# ##################
+# data guard section
+# ##################
+log_archive_config		= 'dg_config=(PCDB_KDC,PCDB_ADC,E00CDB)'
+dg_broker_start			= TRUE
+#connection_brokers		= '((TYPE=DEDICATED)(BROKERS=1))'
+#connection_brokers		= '((TYPE=EMON)(BROKERS=1))'
+dg_broker_config_file1		= '+DATA/E00CDB/dataguardconfig/dg1_e00cdb.dat'
+dg_broker_config_file2		= '+RECO/E00CDB/dataguardconfig/dg2_e00cdb.dat'
+log_archive_dest_1 		= "location=USE_DB_RECOVERY_FILE_DEST mandatory valid_for=(ALL_LOGFILES, ALL_ROLES)"
+log_archive_dest_state_1 	= "enable"
+log_archive_dest_4		= 'service=PCDB_ADC LGWR ASYNC NOAFFIRM delay=0 optional compression=disable max_failure=0 max_connections=1 reopen=300 db_unique_name=PCDB_ADC net_timeout=30, valid_for=(all_logfiles,primary_role)'
+log_archive_dest_state_4 	= "enable"
+standby_file_management 	= AUTO
+db_file_name_convert		= '+PRD_TD_SHA_DATA/PCDB_KDC', '+DATA/E00CDB', '+PRD_T0_SHA_DATA/PCDB_KDC', '+DATA/E00CDB', '+PRD_TD_SHA_DATA/PCDB_ADC', '+DATA/E00CDB', '+PRD_T0_SHA_DATA/PCDB_ADC', '+DATA/E00CDB'
+log_file_name_convert		= '+PRD_T0_REDOA/PCDB_KDC/onlinelog/', '+DATA/E00CDB/onlinelog/', '+PRD_T0_REDOB/PCDB_KDC/onlinelog/', '+RECO/E00CDB/onlinelog/'
+fal_server			= 'PCDB_KDC','PCDB_ADC'
+fal_client			= E00EOS
+#standby_archive_dest		= "+RECO"
+
+# ##################
+# Shared Server
+# ##################
+dispatchers			= "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP))(SERVICE=E00CDBXDB))"	

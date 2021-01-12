@@ -1,0 +1,63 @@
+# ################
+# ENV 69
+# ################
+
+MDL6914a_inv  =
+   (DESCRIPTION=
+      (ADDRESS_LIST =
+         (ADDRESS=(PROTOCOL=tcp)(HOST = devebsodg-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA=(SERVICE_NAME=MDL6914a_inv))
+      (HS=OK)
+   )
+
+MDL6914b_inv  =
+   (DESCRIPTION=
+      (ADDRESS_LIST =
+         (ADDRESS=(PROTOCOL=tcp)(HOST = devebsodg-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA=(SERVICE_NAME=MDL6914b_inv))
+      (HS=OK)
+   )
+
+MDL6914a_ips2  =
+   (DESCRIPTION=
+      (ADDRESS_LIST =
+         (ADDRESS=(PROTOCOL=tcp)(HOST = devebsodg-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA=(SERVICE_NAME=MDL6914a_ips2))
+      (HS=OK)
+   )
+
+MDL6914b_ips2  =
+   (DESCRIPTION=
+      (ADDRESS_LIST =
+         (ADDRESS=(PROTOCOL=tcp)(HOST = devebsodg-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA=(SERVICE_NAME=MDL6914b_ips2))
+      (HS=OK)
+   )
+
+MDL6909a  =
+   (DESCRIPTION=
+      (ADDRESS_LIST =
+         (ADDRESS=(PROTOCOL=tcp)(HOST = devebsodg-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA=(SERVICE_NAME=MDL6909a))
+      (HS=OK)
+   )
+
+MDL6909b  =
+   (DESCRIPTION=
+      (ADDRESS_LIST =
+         (ADDRESS=(PROTOCOL=tcp)(HOST = devebsodg-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA=(SERVICE_NAME=MDL6909b))
+      (HS=OK)
+   )

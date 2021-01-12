@@ -1,0 +1,186 @@
+# #################
+# Env21 Syb eForms
+# #################
+E21SYBEFM, E21SYBEFM.DS.ACC.CO.NZ =
+   (DESCRIPTION =
+      (ADDRESS_LIST = 
+         (ADDRESS = (PROTOCOL = TCP)(HOST = kdclor5001-vip)(PORT = 10000))
+         (ADDRESS = (PROTOCOL = TCP)(HOST = kdclor5002-vip)(PORT = 10000))
+         (ADDRESS = (PROTOCOL = TCP)(HOST = kdclor5003-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA = (SID = E21SYBEFM))
+      (HS=OK)
+   )
+
+# #################
+# Env10 Syb eForms
+# #################
+E10SYBEFM, E10SYBEFM.DS.ACC.CO.NZ =
+   (DESCRIPTION =
+      (ADDRESS_LIST = 
+         (ADDRESS = (PROTOCOL = TCP)(HOST = kdclor5001-vip)(PORT = 10000))
+         (ADDRESS = (PROTOCOL = TCP)(HOST = kdclor5002-vip)(PORT = 10000))
+         (ADDRESS = (PROTOCOL = TCP)(HOST = kdclor5003-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA = (SID = E10SYBEFM))
+      (HS=OK)
+   )
+
+# #################
+# Env73 Syb eForms
+# #################
+E73SYBEFM, E73SYBEFM.DS.ACC.CO.NZ =
+   (DESCRIPTION =
+      (ADDRESS_LIST = 
+         (ADDRESS = (PROTOCOL = TCP)(HOST = kdclor5001-vip)(PORT = 10000))
+         (ADDRESS = (PROTOCOL = TCP)(HOST = kdclor5002-vip)(PORT = 10000))
+         (ADDRESS = (PROTOCOL = TCP)(HOST = kdclor5003-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA = (SID = E73SYBEFM))
+      (HS=OK)
+   )
+
+# #################
+# Env03 Syb eForms
+# #################
+E03SYBEFM, E03SYBEFM.DS.ACC.CO.NZ =
+   (DESCRIPTION =
+      (ADDRESS_LIST = 
+         (ADDRESS = (PROTOCOL = TCP)(HOST = kdclor5001-vip)(PORT = 10000))
+         (ADDRESS = (PROTOCOL = TCP)(HOST = kdclor5002-vip)(PORT = 10000))
+         (ADDRESS = (PROTOCOL = TCP)(HOST = kdclor5003-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA = (SID = E03SYBEFM))
+      (HS=OK)
+   )
+
+# #################
+# Env56 Syb IPS2
+# #################
+E56IPS2, E56IPS2.DS.ACC.CO.NZ =
+   (DESCRIPTION =
+      (ADDRESS_LIST = 
+         (ADDRESS = (PROTOCOL = TCP)(HOST = kdclor5001-vip)(PORT = 10000))
+         (ADDRESS = (PROTOCOL = TCP)(HOST = kdclor5002-vip)(PORT = 10000))
+         (ADDRESS = (PROTOCOL = TCP)(HOST = kdclor5003-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA = (SID = E56IPS2))
+      (HS=OK)
+   )
+
+# #################
+# IDP/ER
+# #################
+IDPD01,IDPD01.DS.ACC.CO.NZ =
+   (DESCRIPTION =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = kdcldb5013.ds.acc.co.nz)(PORT = 1521))
+      (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = IDPD01))
+   )
+
+IDPT01,IDPT01.DS.ACC.CO.NZ =
+   (DESCRIPTION =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = kdcldb5013.ds.acc.co.nz)(PORT = 1521))
+      (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = IDPT01))
+   )
+
+IDPN01,IDPN01.DS.ACC.CO.NZ =
+   (DESCRIPTION =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = adcldb5012.ds.acc.co.nz)(PORT = 1521))
+      (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = IDPN01))
+   )
+
+IDPN03,IDPN03.DS.ACC.CO.NZ =
+   (DESCRIPTION =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = adcldb5012.ds.acc.co.nz)(PORT = 1521))
+      (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = IDPN03))
+   )
+
+IFE16, IFE16.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = kdclea0045)(PORT = 1521))
+    (LOAD_BALANCE = yes)
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = IFE16))
+  )
+
+IFD11, IFD11.DS.ACC.CO.NZ =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = kdcldb5013.ds.acc.co.nz)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = idpe2e))
+  )
+
+IFT19, IFT19.DS.ACC.CO.NZ =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adcldb5011.ds.acc.co.nz)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = ift19))
+  )
+
+IFP19,IFP19.DS.ACC.CO.NZ =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = kdcldb0004.ds.acc.co.nz)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = ifp19))
+  )
+
+IFD19,IFD19.DS.ACC.CO.NZ =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adcldb5011.ds.acc.co.nz)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = ifd19))
+  )
+
+IDPP09,IDPP09.DS.ACC.CO.NZ =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = kdcldb0004.ds.acc.co.nz)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = idpp09))
+  )
+
+IDPD09,IDPD09.DS.ACC.CO.NZ =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = kdcldb0004.ds.acc.co.nz)(PORT = 1521))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = idpd09))
+  )
+
+IFN11,IFN11.DS.ACC.CO.NZ =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = adcldb5012.ds.acc.co.nz)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = ifn11)
+    )
+  )
+
+##################
+# Others
+# #################
+EOSIMGC_STATIC, EOSIMGC_STATIC.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = kdclor5001)(PORT = 10001))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SID = EOSIMGC1))
+  )
+
+E09EOS_STATIC, E09EOS_STATIC.ds.acc.co.nz =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = kdclor5001)(PORT = 10001))
+    (CONNECT_DATA = (SERVER = DEDICATED)(SID = E09EOS1))
+  )
+
+D07EGW =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = devcluster-scan)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = D07EGW)
+    )
+  )
+
+T07TES =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = devcluster-scan)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = T07TES)
+    )
+  )

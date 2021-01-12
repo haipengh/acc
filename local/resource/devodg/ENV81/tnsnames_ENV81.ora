@@ -1,0 +1,63 @@
+# ################
+# ENV 81
+# ################
+
+MDL8114a_inv  =
+   (DESCRIPTION=
+      (ADDRESS_LIST =
+         (ADDRESS=(PROTOCOL=tcp)(HOST = devebsodg-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA=(SERVICE_NAME=MDL8114a_inv))
+      (HS=OK)
+   )
+
+MDL8114b_inv  =
+   (DESCRIPTION=
+      (ADDRESS_LIST =
+         (ADDRESS=(PROTOCOL=tcp)(HOST = devebsodg-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA=(SERVICE_NAME=MDL8114b_inv))
+      (HS=OK)
+   )
+
+MDL8114a_ips2  =
+   (DESCRIPTION=
+      (ADDRESS_LIST =
+         (ADDRESS=(PROTOCOL=tcp)(HOST = devebsodg-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA=(SERVICE_NAME=MDL8114a_ips2))
+      (HS=OK)
+   )
+
+MDL8114b_ips2  =
+   (DESCRIPTION=
+      (ADDRESS_LIST =
+         (ADDRESS=(PROTOCOL=tcp)(HOST = devebsodg-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA=(SERVICE_NAME=MDL8114b_ips2))
+      (HS=OK)
+   )
+
+MDL8109a  =
+   (DESCRIPTION=
+      (ADDRESS_LIST =
+         (ADDRESS=(PROTOCOL=tcp)(HOST = devebsodg-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA=(SERVICE_NAME=MDL8109a))
+      (HS=OK)
+   )
+
+MDL8109b  =
+   (DESCRIPTION=
+      (ADDRESS_LIST =
+         (ADDRESS=(PROTOCOL=tcp)(HOST = devebsodg-vip)(PORT = 10000))
+      )
+      (LOAD_BALANCE = yes)
+      (CONNECT_DATA=(SERVICE_NAME=MDL8109b))
+      (HS=OK)
+   )

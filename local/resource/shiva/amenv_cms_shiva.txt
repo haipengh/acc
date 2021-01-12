@@ -1,0 +1,16 @@
+SEFM7     :ENV2      ::::::      :      :EFM::::::N:DELETE_ARCHLOG_7DAYS::Env2 - eForms - production support PST
+SEFM4     :ENV3      ::::::      :      :EFM::::::N:DELETE_ARCHLOG_7DAYS::Env3 - eForms - production support PSS
+#DCMS2   :DEV   ::EOS::::::N:N:CMS Development (10.2.0.2) - decommissioned
+#SCMS15  :ENV15 ::EOS::::::N:N:Env15 - EOS - moved to RAC
+#FCMS1   :ENV30 ::EOS::::::N:N:Env30 - EOS - moved to RAC
+#SCMS4   :ENV3  ::EOS::::::N:N:Env3 - EOS - production support PSS (moved to drcluster)
+#SCMS5   :ENV31 ::EOS::::::N:N:Env31 - EOS - moved to RAC
+#FCMS4   :ENV66 ::EOS::::::N:N:Env66 - EOS - moved to RAC
+#SCMS6   :ENV1  ::EOS::::::N:N:Env1 - EOS - moved to RAC
+#SCMS7   :ENV2  ::EOS::::::N:N:Env2 - EOS - production support PST (moved to drcluster)
+#SCMS230 :ENV23 ::EOS::::::N:N:Env23 - EOS - moved to RAC
+#SEFM230 :ENV23 ::EOS::::::N:N:Env23 - eForms - moved to mars
+#SCMS35  :ENV35 ::EOS::::::N:N:Env35 - EOS - moved to RAC
+#SCMS44  :ENV44 ::EOS::::::N:N:Env44 - EOS - moved to RAC
+#SCMS47  :ENV47 ::EOS::::::N:N:Env47 - EOS - moved to RAC
+#SAS14   :ENV14 ::OBI::::::N:N:Env14 - SAS 9.2 Pilot - To be dropped

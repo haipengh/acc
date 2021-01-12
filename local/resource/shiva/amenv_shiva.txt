@@ -1,0 +1,3 @@
+include = ${AM_LOCAL_TOP}/resource/shiva/amenv_vcf_shiva.txt
+#include = ${AM_LOCAL_TOP}/resource/shiva/amenv_cms_shiva.txt
+#include = ${AM_LOCAL_TOP}/resource/shiva/amenv_fin_shiva.txt

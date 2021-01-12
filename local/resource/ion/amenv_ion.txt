@@ -1,0 +1,6 @@
+include = ${AM_LOCAL_TOP}/resource/ion/amenv_cms_ion.txt
+include = ${AM_LOCAL_TOP}/resource/ion/amenv_vcf_ion.txt
+include = ${AM_LOCAL_TOP}/resource/ion/amenv_emg_ion.txt
+include = ${AM_LOCAL_TOP}/resource/ion/amenv_hcm_ion.txt
+include = ${AM_LOCAL_TOP}/resource/ion/amenv_esb_ion.txt
+include = ${AM_LOCAL_TOP}/resource/ion/amenv_fin_ion.txt

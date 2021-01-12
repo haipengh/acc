@@ -1,0 +1,14 @@
+# META BUILD-23
+ESB      :ESB       :GRP::     ::::              :              :   :ACC:                                                                              :       ::::                                ::                      :       :ESB Group
+TESB4    :TEST      :   ::ESB  ::::              :              :ESB:   :                                                                              :       ::::                                ::                      :       :Test ESB for eGateay
+#obsolete
+#TESB1    :TEST      :   ::ESB  ::::              :              :ESB:   :                                                                              :       ::::                                ::                      :       :Test - ESB
+#TESB5    :TEST      :   ::ESB  ::::              :              :ESB:   :                                                                              :       ::::                                ::                      :       :Test ESB for eGateay UAT
+#TESB7    :TEST      :   ::ESB  ::::              :              :ESB:   :                                                                              :       ::::                                ::                      :       :Test ESB - decommissioned
+#TESB8    :ENV14     :   ::ESB  ::::              :              :ESB:   :                                                                              :       ::::                                ::                      :       :Test ESB 
+#TESB11   :ENV23     :   ::ESB  ::::              :              :ESB:   :                                                                              :       ::::                                ::                      :       :Test ESB 
+#TESB12   :ENV77     :   ::ESB  ::::              :              :ESB:   :                                                                              :       ::::                                ::                      :       :Test ESB 
+#TESB6    :ENV10     :   ::ESB  ::::              :              :ESB:   :                                                                              :       ::::                                ::                      :       :Test ESB for eGateay Test
+#TESB10   :ENV69     :   ::ESB  ::::              :              :ESB:   :                                                                              :       ::::                                ::                      :       :Test ESB 
+#TESB9    :TEST      :   ::ESB  ::::              :              :ESB:   :                                                                              :       ::::                                ::                      :       :Test ESB - replaced by E38EBS
+

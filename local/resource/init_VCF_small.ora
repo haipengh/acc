@@ -1,0 +1,61 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/init_VCF_small.ora,v 1.4 2012/09/12 06:36:41 hongh Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : init.ora
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000 H Hong        2005/06/13 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# ##################
+# genernal
+# ##################
+db_domain 			= ""
+global_names 			= TRUE
+
+undo_management			= AUTO
+undo_tablespace			= UNDOTBS
+undo_retention			= 900
+undo_suppress_errors 		= TRUE
+
+max_dump_file_size 		= 10240		#unlimited
+
+optimizer_mode			= FIRST_ROWS
+compatible			= 9.2.0.0.0
+remote_login_passwordfile	= EXCLUSIVE
+query_rewrite_enabled		= FALSE
+hash_join_enabled		= FALSE
+star_transformation_enabled	= FALSE
+timed_statistics		= TRUE
+
+db_block_size			= 8192
+#sga_max_size			= 1000M
+db_cache_size			= 200M
+shared_pool_size		= 300M
+java_pool_size			= 150M
+large_pool_size			= 50M
+workarea_size_policy		= AUTO
+pga_aggregate_target		= 100M
+#sort_area_size			= 524288
+db_file_multiblock_read_count	= 8
+cursor_sharing			= SIMILAR
+session_cached_cursors		= 160
+open_cursors			= 360
+processes			= 150
+job_queue_processes		= 10
+aq_tm_processes			= 0
+control_file_record_keep_time	= 30
+
+fast_start_mttr_target		= 300
+
+# ##################
+# data guard section
+# ##################
+log_archive_start		= TRUE
+log_archive_max_processes	= 2
+log_archive_trace		= 2048
+archive_lag_target		= 900
+log_archive_min_succeed_dest	= 1

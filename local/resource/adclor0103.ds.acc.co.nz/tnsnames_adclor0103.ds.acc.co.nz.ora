@@ -1,0 +1,20 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/adclor0103.ds.acc.co.nz/tnsnames_adclor0103.ds.acc.co.nz.ora,v 1.1 2017/11/27 21:04:10 cvsadmin Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : listener.ora
+# Purpose : this is the listener.ora for database
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000 H Hong        2005/06/14 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# tnsnames.ora file for localhost
+#
+#    DB        SID          Host         Port    Valid
+#    --------  -----------  ------------ ------- -----
+#
+
+ifile=/nfr001/local/resource/drrac/tnsnames_drrac.ora

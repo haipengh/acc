@@ -1,0 +1,3 @@
+IDP_T     :TST   ::OBI::::::::IDP Test
+OMA       :OEM   :OMA:OEM:${AM_LOCAL_TOP}/resource/$(hostname)/profile_$(hostname)_OMA.env:oemappl::::N:N:GC Agent (DEV)
+

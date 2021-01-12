@@ -1,0 +1,28 @@
+# $Header: /u999/cvsadmin/cms_rep/repository/local_acc/resource/kdclem5001.ds.acc.co.nz/tnsnames_kdclem5001.ds.acc.co.nz.ora,v 1.1 2015/09/09 22:44:35 cvsadmin Exp $
+# -----------------------------------------------------------------------------------------------
+# Script  : listener.ora
+# Purpose : this is the listener.ora for database
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000 H Hong        2005/06/14 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+# tnsnames.ora file for localhost
+#
+#    SID         Host       Port    Valid
+#    ----------  ---------- ------- -----
+#    DGCREPO     kdclem5001 1521    Y
+#
+
+# #################
+# kdclem5001
+# #################
+DCCREPO, DCCREPO.DS.ACC.CO.NZ =
+        (DESCRIPTION =
+                (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = kdclem5001.ds.acc.co.nz)(PORT = 1521)))
+                (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = DCCREPO.DS.ACC.CO.NZ))
+        )
