@@ -1,2 +1,2 @@
 # repo
-general repository
+# general repository
