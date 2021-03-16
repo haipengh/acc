@@ -1,0 +1,17 @@
+# $Header$
+# -----------------------------------------------------------------------------------------------
+# Script  : tnsnames.ora
+# Purpose : this is the tnsnames.ora for database
+# Notes   : this file is maintained by CVS source code system. Any change on this file should
+#           be done through the SDLC path.
+# Changes :
+#           Seq Name          Date       Description
+#           --- ------------- ---------- --------------------------------------------------------
+#           000               2005/06/14 Initial creation.
+# -----------------------------------------------------------------------------------------------
+#
+
+CC_REPO, CC_REPO_E85.ds.acc.co.nz     = (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=artlem0001)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=CC_REPO.DS.ACC.CO.NZ)))
+CCREPO, CCREPO.ds.acc.co.nz           = (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=artlem0001)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=CCREPO.DS.ACC.CO.NZ)))
+SSL_CC_REPO, SSL_CC_REPO.ds.acc.co.nz = (DESCRIPTION=(ADDRESS=(PROTOCOL=TCPS)(HOST=artlem0001)(PORT=2484))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=CC_REPO.DS.ACC.CO.NZ)))
+SSL_CCREPO, SSL_CCREPO.ds.acc.co.nz   = (DESCRIPTION=(ADDRESS=(PROTOCOL=TCPS)(HOST=artlem0001)(PORT=2484))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=CCREPO.DS.ACC.CO.NZ)))
